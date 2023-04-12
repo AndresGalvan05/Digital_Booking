@@ -1,0 +1,28 @@
+
+.categoryBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.flexWrapper{
+    display: flex;
+    gap: 10px;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+/**** MEDIA QUERY PARA TABLET 768px ****/
+@media (max-width:1280px) {
+    .flexWrapper{
+        justify-content: space-between;
+    }
+}
+
+/**** MEDIA QUERY PARA mobile-portrait 479px ****/
+@media (max-width:479px) {
+    .flexWrapper{
+        flex-direction: column;
+    }
+}

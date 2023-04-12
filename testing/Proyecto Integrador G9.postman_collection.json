@@ -1,0 +1,5063 @@
+{
+	"info": {
+		"_postman_id": "794b93cf-2940-4cc4-a476-a24f9229617a",
+		"name": "Proyecto Integrador G9",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20133994"
+	},
+	"item": [
+		{
+			"name": "Post login con USER JWT",
+			"event": [
+				{
+<<<<<<< HEAD
+					"name": "0 - Categorias base",
+					"item": [
+						{
+							"name": "Agregar hotel 1",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Confirmo que el objeto que envío tenga un las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+											"pm.test(\"Same schema\", () => {\r",
+											"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+											"    const categorySchema = {\r",
+											"        titulo: '',\r",
+											"        descripcion: '',\r",
+											"        urlImagen: ''\r",
+											"    }\r",
+											"\r",
+											"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body\r",
+											"    const body = JSON.parse(pm.request.body.raw);\r",
+											"    const sameSchema = JSON.stringify(Object.keys(categorySchema)) === JSON.stringify(Object.keys(body));\r",
+											"    console.log(categorySchema);\r",
+											"    pm.expect(true).to.be.eql(sameSchema);\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\" : \"Hermitage Hotel\",\r\n    \"descripcion\" : \"hotel\",\r\n    \"urlImagen\" : \"https://unsplash.com/photos/oxeCZrodz78\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar hotel 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Confirmo que el objeto que envío tenga un las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+											"pm.test(\"Same schema\", () => {\r",
+											"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+											"    const categorySchema = {\r",
+											"        titulo: '',\r",
+											"        descripcion: '',\r",
+											"        urlImagen: ''\r",
+											"    }\r",
+											"\r",
+											"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body\r",
+											"    const body = JSON.parse(pm.request.body.raw);\r",
+											"    const sameSchema = JSON.stringify(Object.keys(categorySchema)) === JSON.stringify(Object.keys(body));\r",
+											"    console.log(categorySchema);\r",
+											"    pm.expect(true).to.be.eql(sameSchema);\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\" : \"Azul Hotel\",\r\n    \"descripcion\" : \"hotel\",\r\n    \"urlImagen\" : \"https://unsplash.com/photos/Yrxr3bsPdS0\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar hostel 1",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Confirmo que el objeto que envío tenga un las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+											"pm.test(\"Same schema\", () => {\r",
+											"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+											"    const categorySchema = {\r",
+											"        titulo: '',\r",
+											"        descripcion: '',\r",
+											"        urlImagen: ''\r",
+											"    }\r",
+											"\r",
+											"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body\r",
+											"    const body = JSON.parse(pm.request.body.raw);\r",
+											"    const sameSchema = JSON.stringify(Object.keys(categorySchema)) === JSON.stringify(Object.keys(body));\r",
+											"    console.log(categorySchema);\r",
+											"    pm.expect(true).to.be.eql(sameSchema);\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\" : \"Hostel Salamanca\",\r\n    \"descripcion\" : \"hostel\",\r\n    \"urlImagen\" : \"https://unsplash.com/photos/kg06gupFNZc\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar hostel 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Confirmo que el objeto que envío tenga un las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+											"pm.test(\"Same schema\", () => {\r",
+											"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+											"    const categorySchema = {\r",
+											"        titulo: '',\r",
+											"        descripcion: '',\r",
+											"        urlImagen: ''\r",
+											"    }\r",
+											"\r",
+											"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body\r",
+											"    const body = JSON.parse(pm.request.body.raw);\r",
+											"    const sameSchema = JSON.stringify(Object.keys(categorySchema)) === JSON.stringify(Object.keys(body));\r",
+											"    console.log(categorySchema);\r",
+											"    pm.expect(true).to.be.eql(sameSchema);\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\" : \"Hostel Tropical\",\r\n    \"descripcion\" : \"hostel\",\r\n    \"urlImagen\" : \"https://unsplash.com/photos/T1Yvmf4oleQ\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar apartamento 1",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Confirmo que el objeto que envío tenga un las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+											"pm.test(\"Same schema\", () => {\r",
+											"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+											"    const categorySchema = {\r",
+											"        titulo: '',\r",
+											"        descripcion: '',\r",
+											"        urlImagen: ''\r",
+											"    }\r",
+											"\r",
+											"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body\r",
+											"    const body = JSON.parse(pm.request.body.raw);\r",
+											"    const sameSchema = JSON.stringify(Object.keys(categorySchema)) === JSON.stringify(Object.keys(body));\r",
+											"    console.log(categorySchema);\r",
+											"    pm.expect(true).to.be.eql(sameSchema);\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\" : \"Apartamento El Desahuciado\",\r\n    \"descripcion\" : \"apartamento\",\r\n    \"urlImagen\" : \"https://unsplash.com/photos/FqqiAvJejto\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar apartamento 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Confirmo que el objeto que envío tenga un las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+											"pm.test(\"Same schema\", () => {\r",
+											"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+											"    const categorySchema = {\r",
+											"        titulo: '',\r",
+											"        descripcion: '',\r",
+											"        urlImagen: ''\r",
+											"    }\r",
+											"\r",
+											"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body\r",
+											"    const body = JSON.parse(pm.request.body.raw);\r",
+											"    const sameSchema = JSON.stringify(Object.keys(categorySchema)) === JSON.stringify(Object.keys(body));\r",
+											"    console.log(categorySchema);\r",
+											"    pm.expect(true).to.be.eql(sameSchema);\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\" : \"Apartamento SiempreFeliz\",\r\n    \"descripcion\" : \"apartamento\",\r\n    \"urlImagen\" : \"https://unsplash.com/photos/DhFHtkECn7Q\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar b&b 1",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Confirmo que el objeto que envío tenga un las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+											"pm.test(\"Same schema\", () => {\r",
+											"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+											"    const categorySchema = {\r",
+											"        titulo: '',\r",
+											"        descripcion: '',\r",
+											"        urlImagen: ''\r",
+											"    }\r",
+											"\r",
+											"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body\r",
+											"    const body = JSON.parse(pm.request.body.raw);\r",
+											"    const sameSchema = JSON.stringify(Object.keys(categorySchema)) === JSON.stringify(Object.keys(body));\r",
+											"    console.log(categorySchema);\r",
+											"    pm.expect(true).to.be.eql(sameSchema);\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\" : \"Breakfast Quien Pudiera\",\r\n    \"descripcion\" : \"bed and breakfast\",\r\n    \"urlImagen\" : \"https://unsplash.com/photos/AH8zKXqFITA\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Agregar b&b 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Confirmo que el objeto que envío tenga un las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+											"pm.test(\"Same schema\", () => {\r",
+											"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+											"    const categorySchema = {\r",
+											"        titulo: '',\r",
+											"        descripcion: '',\r",
+											"        urlImagen: ''\r",
+											"    }\r",
+											"\r",
+											"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body\r",
+											"    const body = JSON.parse(pm.request.body.raw);\r",
+											"    const sameSchema = JSON.stringify(Object.keys(categorySchema)) === JSON.stringify(Object.keys(body));\r",
+											"    console.log(categorySchema);\r",
+											"    pm.expect(true).to.be.eql(sameSchema);\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\" : \"Breaking Breakfast\",\r\n    \"descripcion\" : \"bed and breakfast\",\r\n    \"urlImagen\" : \"https://unsplash.com/photos/Cx188P-L_HY\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "1 - CRUD",
+					"item": [
+						{
+							"name": "Post categoria",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Confirmo que la petición devuelva un status OK 200\r",
+											"pm.test(\"Status received is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+											"pm.test(\"Same schema\", () => {\r",
+											"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+											"    const categorySchema = {\r",
+											"        titulo: '',\r",
+											"        descripcion: '',\r",
+											"        urlImagen: ''\r",
+											"    }\r",
+											"\r",
+											"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+											"    const body = JSON.parse(pm.request.body.raw);\r",
+											"    const sameSchema = JSON.stringify(Object.keys(categorySchema)) === JSON.stringify(Object.keys(body));\r",
+											"    console.log(categorySchema);\r",
+											"    pm.expect(true).to.be.eql(sameSchema);\r",
+											"})\r",
+											"\r",
+											"// Actualizo el valor de la variable 'categoryId' por el id de la nueva categoría creada, para ser usado por el PUT y el DEL\r",
+											"const response = pm.response.json();\r",
+											"pm.globals.set('categoryId', response.id)\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\" : \"Hermitage Hotel\",\r\n    \"descripcion\" :\"hotel\",\r\n    \"urlImagen\" :\"https://unsplash.com/photos/oxeCZrodz78\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar categoria por ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Confirmo que la petición devuelva un status OK 200\r",
+											"pm.test(\"Status received is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"const response = pm.response.json();\r",
+											"\r",
+											"// Si la respuesta no es satisfactoria devuelve un objeto con propiedades \"status\" (404) y \"message\" (not found), pero si sí es satisfactoria devuelve un objeto con las propiedades esperadas, entre ellas el id\r",
+											"// Object.keys() me devuelve un array de las propiedades del objeto, .includes() devuelve un booleano\r",
+											"pm.test('Response has id', () => {\r",
+											"    const hasId = Object.keys(response).includes('id');\r",
+											"    pm.expect(true).to.be.eql(hasId);\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias/:categoryId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias",
+										":categoryId"
+									],
+									"variable": [
+										{
+											"key": "categoryId",
+											"value": "{{categoryId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar todas las categorias",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Verifico que responda con un código 200\r",
+											"pm.test(\"Status received is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Confirmo que la petición devuelva un status OK 200\r",
+											"pm.test(\"Status received is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Confirmo que el objeto que envío tenga un las mismas keys (propiedades) que las de un objeto de tipo categoria\r",
+											"pm.test(\"Same schema\", () => {\r",
+											"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+											"    const categorySchema = {\r",
+											"        id: \"\",\r",
+											"        titulo: '',\r",
+											"        descripcion: '',\r",
+											"        urlImagen: ''\r",
+											"    }\r",
+											"\r",
+											"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body\r",
+											"    const body = JSON.parse(pm.request.body.raw);\r",
+											"    const sameSchema = JSON.stringify(Object.keys(categorySchema)) === JSON.stringify(Object.keys(body));\r",
+											"    console.log(categorySchema);\r",
+											"    pm.expect(true).to.be.eql(sameSchema);\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": {{categoryId}},\r\n    \"titulo\" : \"{{$randomJobTitle}}\",\r\n    \"descripcion\": \"{{$randomNoun}}\",\r\n    \"urlImagen\": \"{{$randomPeopleImage}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Borrar categoria",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Confirmo que la petición devuelva un status OK 200\r",
+											"pm.test(\"Status received is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias/:categoryId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias",
+										":categoryId"
+									],
+									"variable": [
+										{
+											"key": "categoryId",
+											"value": "{{categoryId}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "2 - Buscar por categoria",
+					"item": [
+						{
+							"name": "Buscar por hotel",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Verifico que responda con un código 200\r",
+											"pm.test(\"Status received is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"const response = pm.response.json();\r",
+											"console.log(response);\r",
+											"\r",
+											"// Filtro la respuesta por el valor de su descripción para quedarme sólo con los hoteles\r",
+											"const values = Object.values(response);\r",
+											"const hoteles = values.filter((item) => item.descripcion === \"hotel\");\r",
+											"\r",
+											"// Confirmo que me devuelva la cantidad correcta de hoteles\r",
+											"pm.test(\"Number of hotels\", () => {\r",
+											"    pm.expect(hoteles.length).to.be.eql(2);\r",
+											"})\r",
+											"\r",
+											"// Confirmo ue cada hotel sea un objeto y que cada elemento del array de hoteles sea un hotel (o sea que diga eso en su descripción)\r",
+											"const hotel = hoteles[0];\r",
+											"pm.test(\"Filtered categories by hotels\", () => {\r",
+											"    pm.expect(hotel).to.be.an(\"object\");\r",
+											"    pm.expect(hotel.descripcion).to.eql(\"hotel\");\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar por hostel",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Verifico que responda con un código 200\r",
+											"pm.test(\"Status received is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"const response = pm.response.json();\r",
+											"console.log(response);\r",
+											"\r",
+											"// Filtro la respuesta por el valor de su descripción para quedarme sólo con los hostels\r",
+											"const values = Object.values(response);\r",
+											"const hostels = values.filter((item) => item.descripcion === \"hostel\");\r",
+											"\r",
+											"// Confirmo que me devuelva la cantidad correcta de hostels\r",
+											"pm.test(\"Number of hostels\", () => {\r",
+											"    pm.expect(hostels.length).to.be.eql(2);\r",
+											"})\r",
+											"\r",
+											"// Confirmo ue cada hostel sea un objeto y que cada elemento del array de hostels sea un hostel (o sea que diga eso en su descripción)\r",
+											"const hostel = hostels[0];\r",
+											"pm.test(\"Filtered categories by hostels\", () => {\r",
+											"    pm.expect(hostel).to.be.an(\"object\");\r",
+											"    pm.expect(hostel.descripcion).to.eql(\"hostel\");\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar por apartamento",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Verifico que responda con un código 200\r",
+											"pm.test(\"Status received is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"const response = pm.response.json();\r",
+											"console.log(response);\r",
+											"\r",
+											"// Filtro la respuesta por el valor de su descripción para quedarme sólo con los apartamentos\r",
+											"const values = Object.values(response);\r",
+											"const apartaments = values.filter((item) => item.descripcion === \"apartamento\");\r",
+											"\r",
+											"// Confirmo que me devuelva la cantidad correcta de apartamentos\r",
+											"pm.test(\"Number of apartaments\", () => {\r",
+											"    pm.expect(apartaments.length).to.be.eql(2);\r",
+											"})\r",
+											"\r",
+											"// Confirmo ue cada apartamento sea un objeto y que cada elemento del array de apartamentos sea un apartamento (o sea que diga eso en su descripción)\r",
+											"const apartament = apartaments[0];\r",
+											"pm.test(\"Filtered categories by apartments\", () => {\r",
+											"    pm.expect(apartament).to.be.an(\"object\");\r",
+											"    pm.expect(apartament.descripcion).to.eql(\"apartamento\");\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Buscar por b&b",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Verifico que responda con un código 200\r",
+											"pm.test(\"Status received is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"const response = pm.response.json();\r",
+											"console.log(response);\r",
+											"\r",
+											"// Filtro la respuesta por el valor de su descripción para quedarme sólo con los b&bs\r",
+											"const values = Object.values(response);\r",
+											"const bedAndBreakfasts = values.filter((item) => item.descripcion === \"bed and breakfast\");\r",
+											"\r",
+											"// Confirmo que me devuelva la cantidad correcta de b&bs\r",
+											"pm.test(\"Number of bed and breakfasts\", () => {\r",
+											"    pm.expect(bedAndBreakfasts.length).to.be.eql(2);\r",
+											"})\r",
+											"\r",
+											"// Confirmo ue cada b&b sea un objeto y que cada elemento del array de b&bs sea un b&b (o sea que diga eso en su descripción)\r",
+											"const bedAndBreakfast = bedAndBreakfasts[0];\r",
+											"pm.test(\"Filtered categories by bed and breakfast\", () => {\r",
+											"    pm.expect(bedAndBreakfast).to.be.an(\"object\");\r",
+											"    pm.expect(bedAndBreakfast.descripcion).to.eql(\"bed and breakfast\");\r",
+											"})\r",
+											"\r",
+											"// Verofico que la respuesta tarde menos del límite llegado\r",
+											"pm.test(\"Response time is less than limit\", () => {\r",
+											"    let limit = 200;\r",
+											"\r",
+											"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+											"\r",
+											"    if (pm.response.responseTime < limit) {      \r",
+											"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+											"    } else {\r",
+											"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+											"    }\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/categorias",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"categorias"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+=======
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const loginSchema = {\r",
+							"        email: '',\r",
+							"        password: ''\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(loginSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(loginSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"rodri@gmail.com\",\r\n    \"password\" : \"Pass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post login con HOST JWT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const loginSchema = {\r",
+							"        email: '',\r",
+							"        password: ''\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(loginSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(loginSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"lucas@gmail.com\",\r\n    \"password\" : \"Pass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post login con ADMIN JWT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const loginSchema = {\r",
+							"        email: '',\r",
+							"        password: ''\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(loginSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(loginSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"andres@gmail.com\",\r\n    \"password\" : \"Pass123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/login",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post caracteristica",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 201\", () => {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const characteristicSchema = {\r",
+							"        nombre: '',\r",
+							"        icono: ''\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(characteristicSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(characteristicSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Actualizo el valor de la variable 'categoryId' por el id de la nueva categoría creada, para ser usado por el PUT y el DEL\r",
+							"const response = pm.response.json();\r",
+							"pm.collectionVariables.set('characteristicId', response.id)\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwMzEyMjE5LCJleHAiOjE5Mzc2NzI1MTUzNjE4MTh9.F37PsVL0-p837KnuI45umHGa09Q4EccY93SemQLH3LY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" : \"WiFi\",\r\n    \"icono\" : \"https://cdn4.iconfinder.com/data/icons/vecico-connectivity/288/wifi_Logo-512.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/caracteristicas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"caracteristicas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post ciudad",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 201\", () => {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo ciudad (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const citySchema = {\r",
+							"        nombre: '',\r",
+							"        pais: ''\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(citySchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(citySchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Actualizo el valor de la variable 'categoryId' por el id de la nueva categoría creada, para ser usado por el PUT y el DEL\r",
+							"const response = pm.response.json();\r",
+							"pm.collectionVariables.set('cityId', response.id)\r",
+							"pm.collectionVariables.set('cityName', response.nombre)\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxMTUzLCJleHAiOjIzNzU1NDkxNjM0MjU4MTh9.czAcUF38FbM2Z6lsKJxScNWeFuk_bNFNBStuCd6rLHk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" : \"Rio de Janeiro\",\r\n    \"pais\" : \"Brasil\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/ciudades",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"ciudades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post categoria",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 201\", () => {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const categorySchema = {\r",
+							"        titulo: '',\r",
+							"        descripcion: '',\r",
+							"        urlImagen: ''\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(categorySchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(categorySchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Actualizo el valor de la variable 'categoryId' por el id de la nueva categoría creada, para ser usado por el PUT y el DEL\r",
+							"const response = pm.response.json();\r",
+							"pm.collectionVariables.set('categoryId', response.id)\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxMTUzLCJleHAiOjIzNzU1NDkxNjM0MjU4MTh9.czAcUF38FbM2Z6lsKJxScNWeFuk_bNFNBStuCd6rLHk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"Hermitage Hotel\",\r\n    \"descripcion\" : \"hotel\",\r\n    \"urlImagen\" : \"https://unsplash.com/photos/oxeCZrodz78\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/categorias",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 201\", () => {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo ciudad (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const productSchema = {\r",
+							"        titulo: '',\r",
+							"        direccion: '',\r",
+							"        descripcion: '',\r",
+							"        latitud: '',\r",
+							"        longitud: '',\r",
+							"        categoria : {\r",
+							"            id: ''\r",
+							"        },\r",
+							"        ciudad: {\r",
+							"            id: ''\r",
+							"        },\r",
+							"        imagenes:[\r",
+							"            { \r",
+							"                titulo: '',\r",
+							"                url: ''\r",
+							"            },\r",
+							"            { \r",
+							"                titulo: '',\r",
+							"                url: ''\r",
+							"            }\r",
+							"        ],\r",
+							"        politicas:[\r",
+							"            {\r",
+							"                titulo: '',\r",
+							"                descripcion: ''\r",
+							"            },\r",
+							"            {\r",
+							"                titulo: '',\r",
+							"                descripcion: ''\r",
+							"            }\r",
+							"        ],\r",
+							"        caracteristicas: [\r",
+							"            {\r",
+							"                id: ''\r",
+							"            }\r",
+							"        ],\r",
+							"        reservas: [\r",
+							"            {\r",
+							"                id: ''\r",
+							"            }\r",
+							"        ],\r",
+							"        puntuaciones: [\r",
+							"            {\r",
+							"                puntuacion: ''\r",
+							"            }\r",
+							"        ]\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(productSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(productSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Actualizo el valor de la variable 'categoryId' por el id de la nueva categoría creada, para ser usado por el PUT y el DEL\r",
+							"const response = pm.response.json();\r",
+							"pm.collectionVariables.set('productId', response.id)\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 20000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+>>>>>>> develop
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsdWNhc0BnbWFpbC5jb20iLCJpYXQiOjE2ODAzMDk1NjUsImV4cCI6MTkzMDc5MTk1Mjg2NTgxOH0.8hPz6gkzsUrIWth9DxNzurfUGPDSOIh0IUKmfRZOxZs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"Hotel Maravilla\",\r\n    \"direccion\" : \"Calle Falsa 123\",\r\n    \"descripcion\": \"El mejor hotel de Buenos Aires\",\r\n    \"latitud\" : 15.01894,\r\n    \"longitud\": 61.5498421,\r\n    \"categoria\" : {\r\n        \"id\": 1\r\n    },\r\n    \"ciudad\": {\r\n        \"id\": 1\r\n    },\r\n    \"imagenes\": [\r\n        { \r\n            \"titulo\": \"img1\",\r\n            \"url\": \"https://unsplash.com/photos/oxeCZrodz78\"\r\n        },\r\n        { \r\n            \"titulo\": \"img2\",\r\n            \"url\": \"https://unsplash.com/photos/AH8zKXqFITA\"\r\n        },\r\n        { \r\n            \"titulo\": \"img3\",\r\n            \"url\": \"https://unsplash.com/photos/AH8zKXqFITA\"\r\n        }\r\n    ],\r\n    \"politicas\": [\r\n        {\r\n            \"titulo\": \"Normas de la casa\",\r\n            \"descripcion\": \"Check out 10:00\"\r\n        },\r\n        {\r\n            \"titulo\": \"Política de cancelación\",\r\n            \"descripcion\": \"Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía.\"\r\n        }\r\n    ],\r\n    \"caracteristicas\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ],\r\n    \"reservas\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ],\r\n    \"puntuaciones\": [\r\n        {\r\n            \"puntuacion\": 5\r\n        },\r\n        {\r\n            \"puntuacion\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/productos",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post imagen",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 201\", () => {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo ciudad (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const imageSchema = {\r",
+							"        titulo: '',\r",
+							"        url: '',\r",
+							"        producto : {\r",
+							"            \"id\": 9,\r",
+							"            titulo : null,\r",
+							"            descripcion : null,\r",
+							"            latitud : null,\r",
+							"            longitud : null,\r",
+							"            politicas : [],\r",
+							"            puntuaciones : [],\r",
+							"            categoria : null,\r",
+							"            ciudad : null,\r",
+							"            caracteristicas : [],\r",
+							"            promedio : 0\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(imageSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(imageSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Actualizo el valor de la variable 'categoryId' por el id de la nueva categoría creada, para ser usado por el PUT y el DEL\r",
+							"const response = pm.response.json();\r",
+							"pm.collectionVariables.set('imageId', response.id)\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsdWNhc0BnbWFpbC5jb20iLCJpYXQiOjE2ODAzMTIxODAsImV4cCI6MTkzNzU2OTk2NTQ3MzgxOH0.QcWXiFlUf_6NP8eqJMYlpNgWA-H11KgZPLsMPhvsSEk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"hotel_1_img\",\r\n    \"url\" : \"https://unsplash.com/photos/oxeCZrodz78\",\r\n    \"producto\" : {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/imagenes",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"imagenes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post politica",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 201\", () => {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo ciudad (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const policySchema = {\r",
+							"        titulo: '',\r",
+							"        descripcion: '',\r",
+							"        producto : {\r",
+							"            id: '',\r",
+							"            titulo : null,\r",
+							"            descripcion : null,\r",
+							"            latitud : null,\r",
+							"            longitud : null,\r",
+							"            politicas : [],\r",
+							"            puntuaciones : [],\r",
+							"            categoria : null,\r",
+							"            ciudad : null,\r",
+							"            caracteristicas : [],\r",
+							"            promedio : 0\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(policySchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(policySchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Actualizo el valor de la variable 'categoryId' por el id de la nueva categoría creada, para ser usado por el PUT y el DEL\r",
+							"const response = pm.response.json();\r",
+							"pm.collectionVariables.set('policyId', response.id)\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsdWNhc0BnbWFpbC5jb20iLCJpYXQiOjE2ODA0ODEyMTcsImV4cCI6MjM3NTcxMzIwMzMyOTgxOH0.DG1YwzMGixIMxUIn1XVBxpD0IcdpEMBTA8Dh_wBi9vs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"Normas de la casa\",\r\n    \"descripcion\" : \"Check-out 10:00\",\r\n    \"producto\" : {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/politicas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"politicas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 201\", () => {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo ciudad (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const userSchema = {\r",
+							"        nombre: '',\r",
+							"        apellido: '',\r",
+							"        email: '',\r",
+							"        password: '',\r",
+							"        role: {\r",
+							"            id: ''\r",
+							"        },\r",
+							"        ciudad: {\r",
+							"            id: ''\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(userSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(userSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Actualizo el valor de la variable 'categoryId' por el id de la nueva categoría creada, para ser usado por el PUT y el DEL\r",
+							"const response = pm.response.json();\r",
+							"pm.collectionVariables.set('userId', response.id)\r",
+							"pm.collectionVariables.set('userEmail', response.email)\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" : \"Andrés\",\r\n    \"apellido\" : \"Galván\",\r\n    \"email\" : \"agalvan@gmail.com\",\r\n    \"password\" : \"Pass123\",\r\n    \"role\": {\r\n        \"id\" : 1\r\n    },\r\n    \"ciudad\": {\r\n        \"id\" : 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/usuarios",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post reserva",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 201\", () => {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const bookingSchema = {\r",
+							"        horaReserva : '',\r",
+							"        fechaInicial : '',\r",
+							"        fechaFinal : '',\r",
+							"        producto : {\r",
+							"            id : ''\r",
+							"        },\r",
+							"        cliente : {\r",
+							"            id : ''\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(bookingSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(bookingSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Actualizo el valor de la variable 'categoryId' por el id de la nueva categoría creada, para ser usado por el PUT y el DEL\r",
+							"const response = pm.response.json();\r",
+							"pm.collectionVariables.set('bookingId', response.id)\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2RyaUBnbWFpbC5jb20iLCJpYXQiOjE2ODA0Njg4NzYsImV4cCI6MjM0MzcyNTI4NzI2NTgxOH0.bCwLeXYX0ds_hDhVe27S9L6ts6RtF4wShmaIv5qB1uQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"horaReserva\" : \"15:30:00\",\r\n    \"fechaInicial\" : \"2015-05-30\",\r\n    \"fechaFinal\" : \"2015-06-15\",\r\n    \"producto\" : {\r\n        \"id\" : 1\r\n    },\r\n    \"cliente\" : {\r\n        \"id\" : 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/reservas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"reservas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post puntuacion",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 201\", () => {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo ciudad (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const ratingSchema = {\r",
+							"        puntuacion: '',\r",
+							"        producto : {\r",
+							"            id: '',\r",
+							"            titulo : null,\r",
+							"            descripcion : null,\r",
+							"            latitud : null,\r",
+							"            longitud : null,\r",
+							"            politicas : [],\r",
+							"            puntuaciones : [],\r",
+							"            categoria : null,\r",
+							"            ciudad : null,\r",
+							"            caracteristicas : [],\r",
+							"            promedio : ''\r",
+							"        },\r",
+							"        cliente : {\r",
+							"            id : '',\r",
+							"            nombre : null,\r",
+							"            apellido : null,\r",
+							"            email : null\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(ratingSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(ratingSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Actualizo el valor de la variable 'categoryId' por el id de la nueva categoría creada, para ser usado por el PUT y el DEL\r",
+							"const response = pm.response.json();\r",
+							"pm.collectionVariables.set('ratingId', response.id)\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 10000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2RyaUBnbWFpbC5jb20iLCJpYXQiOjE2ODA0ODEyODAsImV4cCI6MjM3NTg3NzM5MDk3NzgxOH0.fL5UMUy7Kwt7d6mdcSKu6RHtLCrwQnC2Copif-NPTJw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"puntuacion\" : 5,\r\n    \"producto\" : {\r\n        \"id\": 1\r\n    },\r\n    \"cliente\" : {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/puntuaciones",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"puntuaciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post favorito",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 201\", () => {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo ciudad (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const favoriteSchema = {\r",
+							"        producto : {\r",
+							"            id: '',\r",
+							"            titulo : null,\r",
+							"            descripcion : null,\r",
+							"            latitud : null,\r",
+							"            longitud : null,\r",
+							"            politicas : [],\r",
+							"            puntuaciones : [],\r",
+							"            categoria : null,\r",
+							"            ciudad : null,\r",
+							"            caracteristicas : [],\r",
+							"            promedio : ''\r",
+							"        },\r",
+							"        cliente : {\r",
+							"            id : '',\r",
+							"            nombre : null,\r",
+							"            apellido : null,\r",
+							"            email : null\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(favoriteSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(favoriteSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Actualizo el valor de la variable 'categoryId' por el id de la nueva categoría creada, para ser usado por el PUT y el DEL\r",
+							"const response = pm.response.json();\r",
+							"pm.collectionVariables.set('favoriteId', response.id)\r",
+							"pm.collectionVariables.set('favoriteUserId', response.cliente.id)\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 10000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2RyaUBnbWFpbC5jb20iLCJpYXQiOjE2ODA2NjI3NTIsImV4cCI6Mjg0NjI1MzczMjU0NTgxOH0.H2M8tXBLZKo-_J0xj2gn6iuSS-gfsy8hMxOp7yZ7U0M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"producto\" : {\r\n        \"id\": 1\r\n    },\r\n    \"cliente\" : {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/favoritos",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"favoritos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar caracteristica por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Si la respuesta no es satisfactoria devuelve un objeto con propiedades \"status\" (404) y \"message\" (not found), pero si sí es satisfactoria devuelve un objeto con las propiedades esperadas, entre ellas el id\r",
+							"// Object.keys() me devuelve un array de las propiedades del objeto, .includes() devuelve un booleano\r",
+							"pm.test('Response has id', () => {\r",
+							"    const hasId = Object.keys(response).includes('id');\r",
+							"    pm.expect(true).to.be.eql(hasId);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/caracteristicas/{{characteristicId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"caracteristicas",
+						"{{characteristicId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar ciudad por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Si la respuesta no es satisfactoria devuelve un objeto con propiedades \"status\" (404) y \"message\" (not found), pero si sí es satisfactoria devuelve un objeto con las propiedades esperadas, entre ellas el id\r",
+							"// Object.keys() me devuelve un array de las propiedades del objeto, .includes() devuelve un booleano\r",
+							"pm.test('Response has id', () => {\r",
+							"    const hasId = Object.keys(response).includes('id');\r",
+							"    pm.expect(true).to.be.eql(hasId);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/ciudades/buscarId/{{cityId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"ciudades",
+						"buscarId",
+						"{{cityId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar ciudad por nombre",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Si la respuesta no es satisfactoria devuelve un objeto con propiedades \"status\" (404) y \"message\" (not found), pero si sí es satisfactoria devuelve un objeto con las propiedades esperadas, entre ellas el id\r",
+							"// Object.keys() me devuelve un array de las propiedades del objeto, .includes() devuelve un booleano\r",
+							"pm.test('Response has id', () => {\r",
+							"    const hasId = Object.keys(response).includes('id');\r",
+							"    pm.expect(true).to.be.eql(hasId);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/ciudades/buscarNombre/{{cityName}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"ciudades",
+						"buscarNombre",
+						"{{cityName}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar categoria por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Si la respuesta no es satisfactoria devuelve un objeto con propiedades \"status\" (404) y \"message\" (not found), pero si sí es satisfactoria devuelve un objeto con las propiedades esperadas, entre ellas el id\r",
+							"// Object.keys() me devuelve un array de las propiedades del objeto, .includes() devuelve un booleano\r",
+							"pm.test('Response has id', () => {\r",
+							"    const hasId = Object.keys(response).includes('id');\r",
+							"    pm.expect(true).to.be.eql(hasId);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/categorias/{{categoryId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"categorias",
+						"{{categoryId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar producto por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Si la respuesta no es satisfactoria devuelve un objeto con propiedades \"status\" (404) y \"message\" (not found), pero si sí es satisfactoria devuelve un objeto con las propiedades esperadas, entre ellas el id\r",
+							"// Object.keys() me devuelve un array de las propiedades del objeto, .includes() devuelve un booleano\r",
+							"pm.test('Response has id', () => {\r",
+							"    const hasId = Object.keys(response).includes('id');\r",
+							"    pm.expect(true).to.be.eql(hasId);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{productId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{productId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar productos por ciudad",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/ciudad/{{cityId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"ciudad",
+						"{{cityId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar productos por categoria",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/categoria/{{categoryId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"categoria",
+						"{{categoryId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar 8 productos random",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/random",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"random"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar productos por fechas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/fecha/{{checkInDate}}&&{{checkOutDate}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"fecha",
+						"{{checkInDate}}&&{{checkOutDate}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar productos por ciudad y fecha",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/ciudad/{{cityId}}/fecha/{{checkInDate}}&&{{checkOutDate}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"ciudad",
+						"{{cityId}}",
+						"fecha",
+						"{{checkInDate}}&&{{checkOutDate}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar usuario por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Si la respuesta no es satisfactoria devuelve un objeto con propiedades \"status\" (404) y \"message\" (not found), pero si sí es satisfactoria devuelve un objeto con las propiedades esperadas, entre ellas el id\r",
+							"// Object.keys() me devuelve un array de las propiedades del objeto, .includes() devuelve un booleano\r",
+							"pm.test('Response has id', () => {\r",
+							"    const hasId = Object.keys(response).includes('id');\r",
+							"    pm.expect(true).to.be.eql(hasId);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/usuarios/buscarId/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usuarios",
+						"buscarId",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar usuario por email",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Si la respuesta no es satisfactoria devuelve un objeto con propiedades \"status\" (404) y \"message\" (not found), pero si sí es satisfactoria devuelve un objeto con las propiedades esperadas, entre ellas el id\r",
+							"// Object.keys() me devuelve un array de las propiedades del objeto, .includes() devuelve un booleano\r",
+							"pm.test('Response has id', () => {\r",
+							"    const hasId = Object.keys(response).includes('id');\r",
+							"    pm.expect(true).to.be.eql(hasId);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxMTUzLCJleHAiOjIzNzU1NDkxNjM0MjU4MTh9.czAcUF38FbM2Z6lsKJxScNWeFuk_bNFNBStuCd6rLHk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/usuarios/buscarEmail/andres@gmail.com",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usuarios",
+						"buscarEmail",
+						"andres@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar reserva por ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Si la respuesta no es satisfactoria devuelve un objeto con propiedades \"status\" (404) y \"message\" (not found), pero si sí es satisfactoria devuelve un objeto con las propiedades esperadas, entre ellas el id\r",
+							"// Object.keys() me devuelve un array de las propiedades del objeto, .includes() devuelve un booleano\r",
+							"pm.test('Response has id', () => {\r",
+							"    const hasId = Object.keys(response).includes('id');\r",
+							"    pm.expect(true).to.be.eql(hasId);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxMTUzLCJleHAiOjIzNzU1NDkxNjM0MjU4MTh9.czAcUF38FbM2Z6lsKJxScNWeFuk_bNFNBStuCd6rLHk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/reservas/{{bookingId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"reservas",
+						"{{bookingId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar reservas por usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxMTUzLCJleHAiOjIzNzU1NDkxNjM0MjU4MTh9.czAcUF38FbM2Z6lsKJxScNWeFuk_bNFNBStuCd6rLHk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/reservas/usuario/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"reservas",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar puntuaciones por producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxMTUzLCJleHAiOjIzNzU1NDkxNjM0MjU4MTh9.czAcUF38FbM2Z6lsKJxScNWeFuk_bNFNBStuCd6rLHk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/puntuaciones/producto/{{productId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"puntuaciones",
+						"producto",
+						"{{productId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar puntuaciones por usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxMTUzLCJleHAiOjIzNzU1NDkxNjM0MjU4MTh9.czAcUF38FbM2Z6lsKJxScNWeFuk_bNFNBStuCd6rLHk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/puntuaciones/usuario/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"puntuaciones",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar favoritos por usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxMTUzLCJleHAiOjIzNzU1NDkxNjM0MjU4MTh9.czAcUF38FbM2Z6lsKJxScNWeFuk_bNFNBStuCd6rLHk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/favoritos/{{favoriteUserId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"favoritos",
+						"{{favoriteUserId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todas las caracteristicas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Verifico que responda con un código 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response is not empty\", () => {\r",
+							"    pm.expect(jsonData).to.not.have.lengthOf(0);\r",
+							"});\r",
+							"\r",
+							"//  Uso lodash map para obtener un array plano de todos los ids de categorías devueltos\r",
+							"const characteristic_ids = _.map(jsonData, 'id');\r",
+							"\r",
+							"console.log(characteristic_ids)\r",
+							"\r",
+							"// El ID del objeto recién creado debería estar en la variable category_ids\r",
+							"pm.test(\"Expected characteristic id is in the returned array\", () => {\r",
+							"    pm.expect(characteristic_ids).to.include(pm.variables.get(\"characteristicId\"));\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/caracteristicas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"caracteristicas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todas las ciudades",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Verifico que responda con un código 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response is not empty\", () => {\r",
+							"    pm.expect(jsonData).to.not.have.lengthOf(0);\r",
+							"});\r",
+							"\r",
+							"//  Uso lodash map para obtener un array plano de todos los ids de ciudades devueltos\r",
+							"const city_ids = _.map(jsonData, 'id');\r",
+							"\r",
+							"// El ID del objeto recién creado debería estar en la variable city_ids\r",
+							"pm.test(\"Expected city id is in the returned array\", () => {\r",
+							"    pm.expect(city_ids).to.include(pm.variables.get(\"cityId\"));\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/ciudades",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"ciudades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todas las categorias",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Verifico que responda con un código 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response is not empty\", () => {\r",
+							"    pm.expect(jsonData).to.not.have.lengthOf(0);\r",
+							"});\r",
+							"\r",
+							"//  Uso lodash map para obtener un array plano de todos los ids de categorías devueltos\r",
+							"const category_ids = _.map(jsonData, 'id');\r",
+							"\r",
+							"console.log(category_ids)\r",
+							"\r",
+							"// El ID del objeto recién creado debería estar en la variable category_ids\r",
+							"pm.test(\"Expected category id is in the returned array\", () => {\r",
+							"    pm.expect(category_ids).to.include(pm.variables.get(\"categoryId\"));\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/categorias",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todos los productos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Verifico que responda con un código 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response is not empty\", () => {\r",
+							"    pm.expect(jsonData).to.not.have.lengthOf(0);\r",
+							"});\r",
+							"\r",
+							"//  Uso lodash map para obtener un array plano de todos los ids de ciudades devueltos\r",
+							"const product_ids = _.map(jsonData, 'id');\r",
+							"\r",
+							"// El ID del objeto recién creado debería estar en la variable city_ids\r",
+							"pm.test(\"Expected product id is in the returned array\", () => {\r",
+							"    pm.expect(product_ids).to.include(pm.variables.get(\"productId\"));\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todas las imagenes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Verifico que responda con un código 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response is not empty\", () => {\r",
+							"    pm.expect(jsonData).to.not.have.lengthOf(0);\r",
+							"});\r",
+							"\r",
+							"//  Uso lodash map para obtener un array plano de todos los ids de ciudades devueltos\r",
+							"const images_ids = _.map(jsonData, 'id');\r",
+							"\r",
+							"// El ID del objeto recién creado debería estar en la variable city_ids\r",
+							"pm.test(\"Expected product id is in the returned array\", () => {\r",
+							"    pm.expect(images_ids).to.include(pm.variables.get(\"imageId\"));\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/imagenes",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"imagenes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todas las politicas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Verifico que responda con un código 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response is not empty\", () => {\r",
+							"    pm.expect(jsonData).to.not.have.lengthOf(0);\r",
+							"});\r",
+							"\r",
+							"//  Uso lodash map para obtener un array plano de todos los ids de ciudades devueltos\r",
+							"const policies_id = _.map(jsonData, 'id');\r",
+							"\r",
+							"// El ID del objeto recién creado debería estar en la variable city_ids\r",
+							"pm.test(\"Expected product id is in the returned array\", () => {\r",
+							"    pm.expect(policies_id).to.include(pm.variables.get(\"policyId\"));\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/politicas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"politicas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todos los usuarios",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Verifico que responda con un código 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response is not empty\", () => {\r",
+							"    pm.expect(jsonData).to.not.have.lengthOf(0);\r",
+							"});\r",
+							"\r",
+							"//  Uso lodash map para obtener un array plano de todos los ids de ciudades devueltos\r",
+							"const user_ids = _.map(jsonData, 'id');\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/usuarios",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todas las reservas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Verifico que responda con un código 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response is not empty\", () => {\r",
+							"    pm.expect(jsonData).to.not.have.lengthOf(0);\r",
+							"});\r",
+							"\r",
+							"//  Uso lodash map para obtener un array plano de todos los ids de ciudades devueltos\r",
+							"const booking_ids = _.map(jsonData, 'id');\r",
+							"\r",
+							"// El ID del objeto recién creado debería estar en la variable city_ids\r",
+							"pm.test(\"Expected product id is in the returned array\", () => {\r",
+							"    pm.expect(booking_ids).to.include(pm.variables.get(\"bookingId\"));\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/reservas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"reservas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todas las puntuaciones",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Verifico que responda con un código 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Response is not empty\", () => {\r",
+							"    pm.expect(jsonData).to.not.have.lengthOf(0);\r",
+							"});\r",
+							"\r",
+							"//  Uso lodash map para obtener un array plano de todos los ids de ciudades devueltos\r",
+							"const rating_ids = _.map(jsonData, 'id');\r",
+							"\r",
+							"// El ID del objeto recién creado debería estar en la variable city_ids\r",
+							"pm.test(\"Expected product id is in the returned array\", () => {\r",
+							"    pm.expect(rating_ids).to.include(pm.variables.get(\"ratingId\"));\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/puntuaciones",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"puntuaciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar caracteristica",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga un las mismas keys (propiedades) que las de un objeto de tipo categoria\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const characteristicSchema = {\r",
+							"        id: '',\r",
+							"        nombre: '',\r",
+							"        icono: ''\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(characteristicSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(characteristicSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxODkzLCJleHAiOjIzNzc0NjY2ODg3Mzc4MTh9.DMHU0l7oAeLwkPKeUzNCTlEK0STpG_Q5k1QXyEa-d-E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : {{characteristicId}},\r\n    \"nombre\" : \"Piscina\",\r\n    \"icono\" : \"https://image.shutterstock.com/image-vector/vector-swimming-260nw-543680881.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/caracteristicas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"caracteristicas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar ciudad",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga un las mismas keys (propiedades) que las de un objeto de tipo ciudad\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const citySchema = {\r",
+							"        id: '',\r",
+							"        nombre: '',\r",
+							"        pais: ''\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(citySchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(citySchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxODkzLCJleHAiOjIzNzc0NjY2ODg3Mzc4MTh9.DMHU0l7oAeLwkPKeUzNCTlEK0STpG_Q5k1QXyEa-d-E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : {{cityId}},\r\n    \"nombre\" : \"Montevideo\",\r\n    \"pais\" : \"Uruguay\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/ciudades",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"ciudades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar categoria",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga un las mismas keys (propiedades) que las de un objeto de tipo categoria\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const categorySchema = {\r",
+							"        id: \"\",\r",
+							"        titulo: '',\r",
+							"        descripcion: '',\r",
+							"        urlImagen: ''\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(categorySchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(categorySchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxODkzLCJleHAiOjIzNzc0NjY2ODg3Mzc4MTh9.DMHU0l7oAeLwkPKeUzNCTlEK0STpG_Q5k1QXyEa-d-E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": {{categoryId}},\r\n    \"titulo\" : \"Updated title\",\r\n    \"descripcion\": \"{{$randomNoun}}\",\r\n    \"urlImagen\": \"https://g9c3-productos.s3.us-east-2.amazonaws.com/Hoteles/BNBBrasil/BNBBrasil1.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/categorias",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"categorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo ciudad (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const productSchema = {\r",
+							"        id: '',\r",
+							"        titulo: '',\r",
+							"        direccion: '',\r",
+							"        descripcion: '',\r",
+							"        latitud: '',\r",
+							"        longitud: '',\r",
+							"        categoria: {\r",
+							"            id: ''\r",
+							"        },\r",
+							"        ciudad: {\r",
+							"            id: ''\r",
+							"        },\r",
+							"        imagenes:[\r",
+							"            { \r",
+							"                titulo: '',\r",
+							"                url: ''\r",
+							"            },\r",
+							"            { \r",
+							"                titulo: '',\r",
+							"                url: ''\r",
+							"            }\r",
+							"        ],\r",
+							"        politicas:[\r",
+							"            {\r",
+							"                titulo: '',\r",
+							"                descripcion: ''\r",
+							"            },\r",
+							"            {\r",
+							"                titulo: '',\r",
+							"                descripcion: ''\r",
+							"            }\r",
+							"        ],\r",
+							"        caracteristicas: [\r",
+							"            {\r",
+							"                id: ''\r",
+							"            }\r",
+							"        ]\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(productSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(productSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsdWNhc0BnbWFpbC5jb20iLCJpYXQiOjE2ODA0ODE5MzcsImV4cCI6MjM3NzU4MDU5MTU4NTgxOH0.dBB9dQrhZs6ettceL_G2q5mXD18HJkh0iAzOtVeGFN0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : {{productId}},\r\n    \"titulo\" : \"Hotel Actualizado\",\r\n    \"direccion\" : \"Calle Verdadera 321\",\r\n    \"descripcion\": \"El mejor hotel de Buenos Aires ha sido actualizado\",\r\n    \"latitud\" : 10.01894,\r\n    \"longitud\": 20.5498421,\r\n    \"categoria\" : {\r\n        \"id\": 1\r\n    },\r\n    \"ciudad\": {\r\n        \"id\": 1\r\n    },\r\n    \"imagenes\":[\r\n        { \r\n            \"titulo\": \"img1_updated\",\r\n            \"url\": \"https://unsplash.com/photos/oxeCZrodz78\"\r\n        },\r\n        { \r\n            \"titulo\": \"img2_updated\",\r\n            \"url\": \"https://unsplash.com/photos/AH8zKXqFITA\"\r\n        }\r\n    ],\r\n    \"politicas\":[\r\n        {\r\n            \"titulo\": \"Normas de la casa actualizadas\",\r\n            \"descripcion\": \"Check out 15:30\"\r\n        },\r\n        {\r\n            \"titulo\": \"Política de cancelación actualizadas\",\r\n            \"descripcion\": \"Agregá las fechas de tu viaje para obtener los detalles de cancelación de esta estadía, o ponte en contacto con nosotros\"\r\n        }\r\n    ],\r\n    \"caracteristicas\": [\r\n\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/productos",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar politica",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo ciudad (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const policySchema = {\r",
+							"        id: '',\r",
+							"        titulo: '',\r",
+							"        descripcion: '',\r",
+							"        producto : {\r",
+							"            id: '',\r",
+							"            titulo : null,\r",
+							"            descripcion : null,\r",
+							"            latitud : null,\r",
+							"            longitud : null,\r",
+							"            politicas : [],\r",
+							"            puntuaciones : [],\r",
+							"            categoria : null,\r",
+							"            ciudad : null,\r",
+							"            caracteristicas : [],\r",
+							"            promedio : 0\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(policySchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(policySchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsdWNhc0BnbWFpbC5jb20iLCJpYXQiOjE2ODA0ODE5MzcsImV4cCI6MjM3NzU4MDU5MTU4NTgxOH0.dBB9dQrhZs6ettceL_G2q5mXD18HJkh0iAzOtVeGFN0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : {{policyId}},\r\n    \"titulo\" : \"Normas de la casa\",\r\n    \"descripcion\" : \"Check-out 15:30\",\r\n    \"producto\" : {\r\n        \"id\": {{productId}}\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/politicas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"politicas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo ciudad (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const userSchema = {\r",
+							"        id: '',\r",
+							"        nombre: '',\r",
+							"        apellido: '',\r",
+							"        email: '',\r",
+							"        password: '',\r",
+							"        role: {\r",
+							"            id: ''\r",
+							"        },\r",
+							"        ciudad: {\r",
+							"            id: ''\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(userSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(userSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 4,\r\n    \"nombre\" : \"Andy\",\r\n    \"apellido\" : \"Galván\",\r\n    \"email\" : \"il.andre@hotmail.com\",\r\n    \"password\": \"Pass123\",\r\n    \"role\": {\r\n        \"id\": 2\r\n    },\r\n    \"ciudad\": {\r\n        \"id\" : 2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/usuarios",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar reserva",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo categoria (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const bookingSchema = {\r",
+							"        id : '',\r",
+							"        horaReserva : '',\r",
+							"        fechaInicial : '',\r",
+							"        fechaFinal : '',\r",
+							"        producto : {\r",
+							"            id : ''\r",
+							"        },\r",
+							"        cliente : {\r",
+							"            id : ''\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(bookingSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(bookingSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2RyaUBnbWFpbC5jb20iLCJpYXQiOjE2ODA0ODIwMjgsImV4cCI6MjM3NzgxNjQ1MDYyNTgxOH0.wyXTQ2CMZ2wJRhysLKGRKtYXDGr8wh56HU_e4RXX0lI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : {{bookingId}},\r\n    \"horaReserva\" : \"20:15:00\",\r\n    \"fechaInicial\" : \"2020-07-04\",\r\n    \"fechaFinal\" : \"2021-02-28\",\r\n    \"producto\" : {\r\n        \"id\" : 2\r\n    },\r\n    \"cliente\" : {\r\n        \"id\" : 2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/reservas",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"reservas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar puntuacion",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Confirmo que el objeto que envío tenga las mismas keys (propiedades) que las de un objeto de tipo ciudad (sin contar el id que es AI)\r",
+							"pm.test(\"Same schema\", () => {\r",
+							"    // Creo un schema con las mismas keys (propiedades) del objeto JSON que espero recibir\r",
+							"    const ratingSchema = {\r",
+							"        id : '',\r",
+							"        puntuacion: '',\r",
+							"        producto : {\r",
+							"            id: '',\r",
+							"            titulo : null,\r",
+							"            descripcion : null,\r",
+							"            latitud : null,\r",
+							"            longitud : null,\r",
+							"            politicas : [],\r",
+							"            puntuaciones : [],\r",
+							"            reservas : [],\r",
+							"            categoria : null,\r",
+							"            ciudad : null,\r",
+							"            caracteristicas : [],\r",
+							"            promedio : ''\r",
+							"        },\r",
+							"        cliente : {\r",
+							"            id : '',\r",
+							"            nombre : null,\r",
+							"            apellido : null,\r",
+							"            email : null,\r",
+							"            password : null,\r",
+							"            role : null,\r",
+							"            ciudad : null,\r",
+							"            reservas : null,\r",
+							"            puntuaciones : null\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    // request.body.raw devuelve el objeto JSON en texto, por lo que primero lo parseo con el JSON.parse para obtener el body y comparo que tenga el mismo schema\r",
+							"    const body = JSON.parse(pm.request.body.raw);\r",
+							"    const sameSchema = JSON.stringify(Object.keys(ratingSchema)) === JSON.stringify(Object.keys(body));\r",
+							"    console.log(ratingSchema);\r",
+							"    pm.expect(true).to.be.eql(sameSchema);\r",
+							"})\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 10000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2RyaUBnbWFpbC5jb20iLCJpYXQiOjE2ODA0ODIwMjgsImV4cCI6MjM3NzgxNjQ1MDYyNTgxOH0.wyXTQ2CMZ2wJRhysLKGRKtYXDGr8wh56HU_e4RXX0lI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : {{ratingId}},\r\n    \"puntuacion\" : 1,\r\n    \"producto\" : {\r\n        \"id\": 2\r\n    },\r\n    \"cliente\" : {\r\n        \"id\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/puntuaciones",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"puntuaciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar favorito",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2RyaUBnbWFpbC5jb20iLCJpYXQiOjE2ODA2NjI3NTIsImV4cCI6Mjg0NjI1MzczMjU0NTgxOH0.H2M8tXBLZKo-_J0xj2gn6iuSS-gfsy8hMxOp7yZ7U0M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/favoritos/{{favoriteId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"favoritos",
+						"{{favoriteId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar puntuacion",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2RyaUBnbWFpbC5jb20iLCJpYXQiOjE2ODA0ODIwMjgsImV4cCI6MjM3NzgxNjQ1MDYyNTgxOH0.wyXTQ2CMZ2wJRhysLKGRKtYXDGr8wh56HU_e4RXX0lI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/puntuaciones/{{ratingId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"puntuaciones",
+						"{{ratingId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar reserva",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsdWNhc0BnbWFpbC5jb20iLCJpYXQiOjE2ODA0ODE5MzcsImV4cCI6MjM3NzU4MDU5MTU4NTgxOH0.dBB9dQrhZs6ettceL_G2q5mXD18HJkh0iAzOtVeGFN0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/reservas/{{bookingId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"reservas",
+						"{{bookingId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/usuarios/3",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"usuarios",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar politica",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNjY0MjE2LCJleHAiOjI4NTAwNDY4OTEyNjU4MTh9.U6WrIQRCMikauJzS86VQAVvZ43QEok8SvPRM8TdGZEU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/politicas/{{ratingId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"politicas",
+						"{{ratingId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar imagen",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNjY0MjE2LCJleHAiOjI4NTAwNDY4OTEyNjU4MTh9.U6WrIQRCMikauJzS86VQAVvZ43QEok8SvPRM8TdGZEU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/imagenes/{{imageId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"imagenes",
+						"{{imageId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar producto",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNjY0MjE2LCJleHAiOjI4NTAwNDY4OTEyNjU4MTh9.U6WrIQRCMikauJzS86VQAVvZ43QEok8SvPRM8TdGZEU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/productos/{{productId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"productos",
+						"{{productId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar categoria",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxODkzLCJleHAiOjIzNzc0NjY2ODg3Mzc4MTh9.DMHU0l7oAeLwkPKeUzNCTlEK0STpG_Q5k1QXyEa-d-E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/categorias/{{categoryId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"categorias",
+						"{{categoryId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar ciudad",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxODkzLCJleHAiOjIzNzc0NjY2ODg3Mzc4MTh9.DMHU0l7oAeLwkPKeUzNCTlEK0STpG_Q5k1QXyEa-d-E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/ciudades/{{cityId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"ciudades",
+						"{{cityId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar caracteristica",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Confirmo que la petición devuelva un status OK 200\r",
+							"pm.test(\"Status received is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Verofico que la respuesta tarde menos del límite llegado\r",
+							"pm.test(\"Response time is less than limit\", () => {\r",
+							"    let limit = 15000;\r",
+							"\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(limit);  \r",
+							"\r",
+							"    if (pm.response.responseTime < limit) {      \r",
+							"        console.log(\"Response Time: \" + pm.response.responseTime + \" ms\" + \" / Response Date: \" + pm.response.headers.get(\"Date\"));\r",
+							"    } else {\r",
+							"        console.log(\"Response time was longer than \" + limit + \" ms.\");\r",
+							"    }\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbmRyZXNAZ21haWwuY29tIiwiaWF0IjoxNjgwNDgxODkzLCJleHAiOjIzNzc0NjY2ODg3Mzc4MTh9.DMHU0l7oAeLwkPKeUzNCTlEK0STpG_Q5k1QXyEa-d-E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/caracteristicas/{{characteristicId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"caracteristicas",
+						"{{characteristicId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "localhost:8090"
+		},
+		{
+			"key": "accessToken",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "userId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "userEmail",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "ratingId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "checkInDate",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "checkOutDate",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "bookingId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "favoriteId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "favoriteUserId",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

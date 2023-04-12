@@ -1,0 +1,65 @@
+.body-booking{
+    background-color: var(--gris-claro);
+}
+.body-booking-title{
+    padding: 20px 0;
+}
+
+.politic{
+    width: 100%;
+    margin: 0px;
+    margin-top: 10px;
+    background-color: #fff;
+
+}
+
+.calendar-container{
+    /* margin: 20px; */
+    margin: 20px 0px;
+}
+
+.reserva{
+    margin-top:20px
+}
+
+
+@media (min-width : 769px) {
+    .body-booking{
+        height:1400px;
+    }
+}
+
+
+
+
+@media (min-width :1280px) {
+
+        .booking-main-section{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            min-height: 950px;
+        }
+
+        .body-booking{
+            height: 100%;
+        }
+        .booking-izquierda{
+            width: 70%;
+            height: 95%;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .booking-derecha{
+            width: 30%;
+            height: 95%;
+            
+        }
+
+        .calendar-container{
+            min-height: 400px;
+            
+        }
+}

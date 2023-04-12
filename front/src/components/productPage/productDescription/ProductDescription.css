@@ -1,0 +1,19 @@
+.titleDetailDescription{
+    color: var(--gris-oscuro);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+}
+.descriptionProduct{
+    color: var(--gris-plomo);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.41px;
+}
+
+@media (min-width : 769px) {
+
+    .section-description-product h3{
+        margin-bottom: 20px;
+    }
+}

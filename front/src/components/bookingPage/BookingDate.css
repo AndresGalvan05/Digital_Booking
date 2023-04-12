@@ -1,0 +1,53 @@
+.reserva-hora-container{
+    /* margin: 20px; */
+    margin: 30px 0; 
+    text-align: left;
+}
+
+.check{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.check p{
+    margin-left: 10px;
+}
+
+.hora{
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: #fff;
+    height: 140px;
+    border-radius: 5px;
+}
+.reserva-select{
+    width: 90%;
+    border: 3px solid transparent;
+	height: 40px;
+	line-height: 45px;
+	padding: 0 18px;
+    margin-top: 15px;
+	transition: .3s ease all;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    border: 1px solid #C2c2c2;
+}
+
+.option{
+    cursor: pointer;
+}
+.option:hover{
+    background-color: var(--naranja);
+}
+
+
+
+@media (min-width : 1280px) {
+    .hora{
+        text-align: left;
+    }
+    
+}

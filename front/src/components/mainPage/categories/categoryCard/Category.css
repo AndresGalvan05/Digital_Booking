@@ -1,0 +1,53 @@
+.categoryContainer{
+    /* min-width: 330px; */
+    min-height: 300px;
+    background: #ffffff;
+    border: 1px solid #f3f1ed;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    width: 24%;
+    transition: var(--animation-type);
+}
+
+.categoryContainer:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+.imgCategories{
+    height: 80%;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+.infoSection{
+    
+    padding: 10px;
+}
+.categoryText{
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 23px;
+}
+.categoryInfo{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    opacity: 0.6;
+}
+
+
+/**** MEDIA QUERY PARA TABLET 768px ****/
+@media (max-width:1280px) {
+    .categoryContainer{
+        width: 48%;
+        min-height: 300px;
+    }
+
+}
+
+@media (max-width:479px) {
+    .categoryContainer{
+        width: 100%;
+        min-height: 200px;
+    }
+
+}

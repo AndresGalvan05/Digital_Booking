@@ -1,0 +1,2407 @@
+{
+	"id": "96b86dc5-238d-4899-af9b-ce7c990d74a3",
+	"name": "Proyecto Integrador G9",
+	"timestamp": "2023-04-05T04:05:03.240Z",
+	"collection_id": "20133994-794b93cf-2940-4cc4-a476-a24f9229617a",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 160,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-04-05T04:01:38.615Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "1968fcb5-7202-4150-bf3b-ac7588c4c58c",
+			"name": "Post login con USER JWT",
+			"url": "localhost:8090/login",
+			"time": 2403,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2403
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "d3bf849d-b1ce-4f60-a4e9-7849bf6451bf",
+			"name": "Post login con HOST JWT",
+			"url": "localhost:8090/login",
+			"time": 2007,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2007
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "a17442bf-9711-4c1b-a91a-bc385297a96a",
+			"name": "Post login con ADMIN JWT",
+			"url": "localhost:8090/login",
+			"time": 3413,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3413
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "d1011698-54d1-4356-a415-9a678b491800",
+			"name": "Post caracteristica",
+			"url": "localhost:8090/caracteristicas",
+			"time": 2731,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status received is 201": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2731
+			],
+			"allTests": [
+				{
+					"Status received is 201": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "f47cd052-521e-45f8-8fdf-38bb14cc38c5",
+			"name": "Post ciudad",
+			"url": "localhost:8090/ciudades",
+			"time": 2686,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status received is 201": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2686
+			],
+			"allTests": [
+				{
+					"Status received is 201": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "8eb2de4f-6407-4bc2-ba21-f88dcfe53ea7",
+			"name": "Post categoria",
+			"url": "localhost:8090/categorias",
+			"time": 2700,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status received is 201": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2700
+			],
+			"allTests": [
+				{
+					"Status received is 201": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "7faa9e3b-3595-4bb5-845f-9227d0945618",
+			"name": "Post producto",
+			"url": "localhost:8090/productos",
+			"time": 2824,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status received is 201": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2824
+			],
+			"allTests": [
+				{
+					"Status received is 201": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "5c4bdeb8-0647-4db4-a461-1a7c12efb5b2",
+			"name": "Post imagen",
+			"url": "localhost:8090/imagenes",
+			"time": 1921,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status received is 201": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1921
+			],
+			"allTests": [
+				{
+					"Status received is 201": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "c2986103-83c3-4c73-98c4-6f0befa83463",
+			"name": "Post politica",
+			"url": "localhost:8090/politicas",
+			"time": 1913,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status received is 201": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1913
+			],
+			"allTests": [
+				{
+					"Status received is 201": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "9963f196-3e7a-4ad8-adcb-eeeadb4d0bf4",
+			"name": "Post usuario",
+			"url": "localhost:8090/usuarios",
+			"time": 4277,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status received is 201": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4277
+			],
+			"allTests": [
+				{
+					"Status received is 201": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "d522ec91-b28a-4157-88f8-428c39fe660b",
+			"name": "Post reserva",
+			"url": "localhost:8090/reservas",
+			"time": 8667,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status received is 201": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8667
+			],
+			"allTests": [
+				{
+					"Status received is 201": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "76587b74-051f-4a25-9281-dd0856c9cfb7",
+			"name": "Post puntuacion",
+			"url": "localhost:8090/puntuaciones",
+			"time": 1939,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status received is 201": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1939
+			],
+			"allTests": [
+				{
+					"Status received is 201": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "a68acbd2-ca61-426e-a598-f7a020871e8c",
+			"name": "Post favorito",
+			"url": "localhost:8090/favoritos",
+			"time": 1912,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status received is 201": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1912
+			],
+			"allTests": [
+				{
+					"Status received is 201": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "17106210-1bc3-477d-922d-e925346f8f92",
+			"name": "Buscar caracteristica por ID",
+			"url": "localhost:8090/caracteristicas/21",
+			"time": 881,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response has id": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				881
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response has id": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "13b1f21a-cdce-4184-bc39-0554b78975b8",
+			"name": "Buscar ciudad por ID",
+			"url": "localhost:8090/ciudades/buscarId/20",
+			"time": 880,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response has id": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				880
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response has id": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "c471d6df-da59-4040-9019-42d00ffe7d39",
+			"name": "Buscar ciudad por nombre",
+			"url": "localhost:8090/ciudades/buscarNombre/Rio de Janeiro",
+			"time": 157,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response has id": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response has id": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "8439095e-c7cd-4c73-80de-5a9cf99dbdc5",
+			"name": "Buscar categoria por ID",
+			"url": "localhost:8090/categorias/16",
+			"time": 881,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response has id": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				881
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response has id": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "d5e4bd3c-0376-4911-b6b8-7e9827d7f8cc",
+			"name": "Buscar producto por ID",
+			"url": "localhost:8090/productos/94",
+			"time": 882,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response has id": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				882
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response has id": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "69b61585-3661-42d3-a367-3b4e7291b100",
+			"name": "Buscar productos por ciudad",
+			"url": "localhost:8090/productos/ciudad/20",
+			"time": 1034,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1034
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "36e8cd6b-2eb9-456c-8439-4403bcfea911",
+			"name": "Buscar productos por categoria",
+			"url": "localhost:8090/productos/categoria/16",
+			"time": 1027,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1027
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "304c8c49-3646-4b78-9966-815261a287ad",
+			"name": "Buscar 8 productos random",
+			"url": "localhost:8090/productos/random",
+			"time": 6218,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6218
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "2ef888dd-2c7b-49e1-9bdd-70efa2f9f708",
+			"name": "Buscar productos por fechas",
+			"url": "localhost:8090/productos/fecha/2023-04-02&&2023-04-15",
+			"time": 5929,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5929
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "14015a2a-f0a0-44a3-ad0f-93dfacb5e266",
+			"name": "Buscar productos por ciudad y fecha",
+			"url": "localhost:8090/productos/ciudad/20/fecha/2023-04-02&&2023-04-15",
+			"time": 1036,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1036
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "8987847f-8bbb-47d1-bdec-1a2a858ad412",
+			"name": "Buscar usuario por ID",
+			"url": "localhost:8090/usuarios/buscarId/1",
+			"time": 3122,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response has id": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3122
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response has id": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "08eac40d-6f4c-4794-bfb4-d63cace7bdc6",
+			"name": "Buscar usuario por email",
+			"url": "localhost:8090/usuarios/buscarEmail/andres@gmail.com",
+			"time": 5505,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response has id": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5505
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response has id": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "e9208e76-62f1-4745-8ee2-a27420efe8da",
+			"name": "Buscar reserva por ID",
+			"url": "localhost:8090/reservas/64",
+			"time": 6693,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response has id": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6693
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response has id": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "da6424f4-cca5-4b2c-bdb7-180acc60c3b8",
+			"name": "Buscar reservas por usuario",
+			"url": "localhost:8090/reservas/usuario/1",
+			"time": 6963,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6963
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "d0540407-2ad8-448b-9da5-75211d4065e7",
+			"name": "Buscar puntuaciones por producto",
+			"url": "localhost:8090/puntuaciones/producto/94",
+			"time": 3416,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3416
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "18e6007f-0e3c-4c5a-b17a-8502372dc7c5",
+			"name": "Buscar puntuaciones por usuario",
+			"url": "localhost:8090/puntuaciones/usuario/1",
+			"time": 5623,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5623
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "797c0b5c-4462-45fc-bd49-c0c5505fa8b8",
+			"name": "Buscar favoritos por usuario",
+			"url": "localhost:8090/favoritos/1",
+			"time": 5664,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5664
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "2cfed760-e9cc-4eee-8aae-95f47bfa038e",
+			"name": "Buscar todas las caracteristicas",
+			"url": "localhost:8090/caracteristicas",
+			"time": 879,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response is not empty": true,
+				"Expected characteristic id is in the returned array": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Expected characteristic id is in the returned array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				879
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response is not empty": true,
+					"Expected characteristic id is in the returned array": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "b3fcb1f7-db7e-4937-9c55-5308eb1e2f33",
+			"name": "Buscar todas las ciudades",
+			"url": "localhost:8090/ciudades",
+			"time": 882,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response is not empty": true,
+				"Expected city id is in the returned array": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Expected city id is in the returned array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				882
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response is not empty": true,
+					"Expected city id is in the returned array": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "18e7453d-148f-40dc-9df2-1c7a5538bfc8",
+			"name": "Buscar todas las categorias",
+			"url": "localhost:8090/categorias",
+			"time": 878,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response is not empty": true,
+				"Expected category id is in the returned array": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Expected category id is in the returned array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				878
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response is not empty": true,
+					"Expected category id is in the returned array": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "1020b1eb-0d18-4b52-a3af-b3b7d613960d",
+			"name": "Buscar todos los productos",
+			"url": "localhost:8090/productos",
+			"time": 6780,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response is not empty": true,
+				"Expected product id is in the returned array": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Expected product id is in the returned array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6780
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response is not empty": true,
+					"Expected product id is in the returned array": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "e4a9a84b-79be-4a89-9a53-74a1249da852",
+			"name": "Buscar todas las imagenes",
+			"url": "localhost:8090/imagenes",
+			"time": 4563,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response is not empty": true,
+				"Expected product id is in the returned array": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Expected product id is in the returned array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4563
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response is not empty": true,
+					"Expected product id is in the returned array": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "b6e7455c-830a-4385-9bcf-866ea3e2353d",
+			"name": "Buscar todas las politicas",
+			"url": "localhost:8090/politicas",
+			"time": 5517,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response is not empty": true,
+				"Expected product id is in the returned array": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Expected product id is in the returned array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5517
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response is not empty": true,
+					"Expected product id is in the returned array": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "98ca7e51-25c3-454e-b409-155e5a3f74d4",
+			"name": "Buscar todos los usuarios",
+			"url": "localhost:8090/usuarios",
+			"time": 5165,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response is not empty": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5165
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response is not empty": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "2205d9e2-073a-4b5d-949d-210d101a4231",
+			"name": "Buscar todas las reservas",
+			"url": "localhost:8090/reservas",
+			"time": 3277,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response is not empty": true,
+				"Expected product id is in the returned array": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Expected product id is in the returned array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3277
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response is not empty": true,
+					"Expected product id is in the returned array": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "ff1f9d19-dfed-4721-9bc4-cc0bc86dcdd3",
+			"name": "Buscar todas las puntuaciones",
+			"url": "localhost:8090/puntuaciones",
+			"time": 3241,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response is not empty": true,
+				"Expected product id is in the returned array": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Expected product id is in the returned array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3241
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response is not empty": true,
+					"Expected product id is in the returned array": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "07b53a82-62f9-4262-a395-e13e9a0c6395",
+			"name": "Actualizar caracteristica",
+			"url": "localhost:8090/caracteristicas",
+			"time": 3843,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3843
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "8afde927-4ecd-4e6b-adc8-0f776144dbfb",
+			"name": "Actualizar ciudad",
+			"url": "localhost:8090/ciudades",
+			"time": 3845,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3845
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "89897eec-141b-44f7-a3c8-da979301ecda",
+			"name": "Actualizar categoria",
+			"url": "localhost:8090/categorias",
+			"time": 3869,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3869
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "b64b394c-089f-4edf-8b73-3f9f45534d26",
+			"name": "Actualizar producto",
+			"url": "localhost:8090/productos",
+			"time": 3515,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3515
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "53259ade-0f20-4bb4-8637-5ffe36939d5d",
+			"name": "Actualizar politica",
+			"url": "localhost:8090/politicas",
+			"time": 5150,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5150
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "ec78853a-c1b1-46ed-bdac-0e787110132c",
+			"name": "Actualizar usuario",
+			"url": "localhost:8090/usuarios",
+			"time": 1611,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1611
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "4b7eb9e2-f484-4a41-8feb-e8dfec81d3c2",
+			"name": "Actualizar reserva",
+			"url": "localhost:8090/reservas",
+			"time": 6336,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6336
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "0aed38cc-91a7-4319-87c6-d5209c89cb74",
+			"name": "Actualizar puntuacion",
+			"url": "localhost:8090/puntuaciones",
+			"time": 4157,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Same schema": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Same schema": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4157
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Same schema": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "07418d6a-31dd-4119-9b0c-ebfc3155576a",
+			"name": "Borrar favorito",
+			"url": "localhost:8090/favoritos/18",
+			"time": 3716,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3716
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "f2f65948-4ac8-4120-ad03-06e4e874682c",
+			"name": "Borrar puntuacion",
+			"url": "localhost:8090/puntuaciones/16",
+			"time": 4169,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4169
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "571a6776-ee17-4f2c-a6fb-3bd108ae34bc",
+			"name": "Borrar reserva",
+			"url": "localhost:8090/reservas/64",
+			"time": 3851,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3851
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "b6fc4cb8-9a33-4e32-8193-eedbebba7ed9",
+			"name": "Borrar usuario",
+			"url": "localhost:8090/usuarios/3",
+			"time": 1472,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1472
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "fbf199ed-51b4-4f03-bd7e-50dec1255109",
+			"name": "Borrar politica",
+			"url": "localhost:8090/politicas/16",
+			"time": 5778,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5778
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "9a9e2a5f-40ee-431b-be4d-3d5352ccfe1a",
+			"name": "Borrar imagen",
+			"url": "localhost:8090/imagenes/393",
+			"time": 5770,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5770
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "f6790616-28c0-41b5-baa1-f28d13b9135f",
+			"name": "Borrar producto",
+			"url": "localhost:8090/productos/94",
+			"time": 5019,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5019
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "84e0e0d9-5406-4307-9ba0-de4ca51bffc3",
+			"name": "Borrar categoria",
+			"url": "localhost:8090/categorias/16",
+			"time": 3705,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3705
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "fbfff3d2-e336-48ee-bad5-6a60429b56e3",
+			"name": "Borrar ciudad",
+			"url": "localhost:8090/ciudades/20",
+			"time": 3844,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3844
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		},
+		{
+			"id": "eaeca591-7326-4a4a-9cb9-424f16c0c7da",
+			"name": "Borrar caracteristica",
+			"url": "localhost:8090/caracteristicas/21",
+			"time": 3560,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status received is 200": true,
+				"Response time is less than limit": true
+			},
+			"testPassFailCounts": {
+				"Status received is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than limit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3560
+			],
+			"allTests": [
+				{
+					"Status received is 200": true,
+					"Response time is less than limit": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 199696,
+	"collection": {
+		"requests": [
+			{
+				"id": "1968fcb5-7202-4150-bf3b-ac7588c4c58c",
+				"method": "POST"
+			},
+			{
+				"id": "d3bf849d-b1ce-4f60-a4e9-7849bf6451bf",
+				"method": "POST"
+			},
+			{
+				"id": "a17442bf-9711-4c1b-a91a-bc385297a96a",
+				"method": "POST"
+			},
+			{
+				"id": "d1011698-54d1-4356-a415-9a678b491800",
+				"method": "POST"
+			},
+			{
+				"id": "f47cd052-521e-45f8-8fdf-38bb14cc38c5",
+				"method": "POST"
+			},
+			{
+				"id": "8eb2de4f-6407-4bc2-ba21-f88dcfe53ea7",
+				"method": "POST"
+			},
+			{
+				"id": "7faa9e3b-3595-4bb5-845f-9227d0945618",
+				"method": "POST"
+			},
+			{
+				"id": "5c4bdeb8-0647-4db4-a461-1a7c12efb5b2",
+				"method": "POST"
+			},
+			{
+				"id": "c2986103-83c3-4c73-98c4-6f0befa83463",
+				"method": "POST"
+			},
+			{
+				"id": "9963f196-3e7a-4ad8-adcb-eeeadb4d0bf4",
+				"method": "POST"
+			},
+			{
+				"id": "d522ec91-b28a-4157-88f8-428c39fe660b",
+				"method": "POST"
+			},
+			{
+				"id": "76587b74-051f-4a25-9281-dd0856c9cfb7",
+				"method": "POST"
+			},
+			{
+				"id": "a68acbd2-ca61-426e-a598-f7a020871e8c",
+				"method": "POST"
+			},
+			{
+				"id": "17106210-1bc3-477d-922d-e925346f8f92",
+				"method": "GET"
+			},
+			{
+				"id": "13b1f21a-cdce-4184-bc39-0554b78975b8",
+				"method": "GET"
+			},
+			{
+				"id": "c471d6df-da59-4040-9019-42d00ffe7d39",
+				"method": "GET"
+			},
+			{
+				"id": "8439095e-c7cd-4c73-80de-5a9cf99dbdc5",
+				"method": "GET"
+			},
+			{
+				"id": "d5e4bd3c-0376-4911-b6b8-7e9827d7f8cc",
+				"method": "GET"
+			},
+			{
+				"id": "69b61585-3661-42d3-a367-3b4e7291b100",
+				"method": "GET"
+			},
+			{
+				"id": "36e8cd6b-2eb9-456c-8439-4403bcfea911",
+				"method": "GET"
+			},
+			{
+				"id": "304c8c49-3646-4b78-9966-815261a287ad",
+				"method": "GET"
+			},
+			{
+				"id": "2ef888dd-2c7b-49e1-9bdd-70efa2f9f708",
+				"method": "GET"
+			},
+			{
+				"id": "14015a2a-f0a0-44a3-ad0f-93dfacb5e266",
+				"method": "GET"
+			},
+			{
+				"id": "8987847f-8bbb-47d1-bdec-1a2a858ad412",
+				"method": "GET"
+			},
+			{
+				"id": "08eac40d-6f4c-4794-bfb4-d63cace7bdc6",
+				"method": "GET"
+			},
+			{
+				"id": "e9208e76-62f1-4745-8ee2-a27420efe8da",
+				"method": "GET"
+			},
+			{
+				"id": "da6424f4-cca5-4b2c-bdb7-180acc60c3b8",
+				"method": "GET"
+			},
+			{
+				"id": "d0540407-2ad8-448b-9da5-75211d4065e7",
+				"method": "GET"
+			},
+			{
+				"id": "18e6007f-0e3c-4c5a-b17a-8502372dc7c5",
+				"method": "GET"
+			},
+			{
+				"id": "797c0b5c-4462-45fc-bd49-c0c5505fa8b8",
+				"method": "GET"
+			},
+			{
+				"id": "2cfed760-e9cc-4eee-8aae-95f47bfa038e",
+				"method": "GET"
+			},
+			{
+				"id": "b3fcb1f7-db7e-4937-9c55-5308eb1e2f33",
+				"method": "GET"
+			},
+			{
+				"id": "18e7453d-148f-40dc-9df2-1c7a5538bfc8",
+				"method": "GET"
+			},
+			{
+				"id": "1020b1eb-0d18-4b52-a3af-b3b7d613960d",
+				"method": "GET"
+			},
+			{
+				"id": "e4a9a84b-79be-4a89-9a53-74a1249da852",
+				"method": "GET"
+			},
+			{
+				"id": "b6e7455c-830a-4385-9bcf-866ea3e2353d",
+				"method": "GET"
+			},
+			{
+				"id": "98ca7e51-25c3-454e-b409-155e5a3f74d4",
+				"method": "GET"
+			},
+			{
+				"id": "2205d9e2-073a-4b5d-949d-210d101a4231",
+				"method": "GET"
+			},
+			{
+				"id": "ff1f9d19-dfed-4721-9bc4-cc0bc86dcdd3",
+				"method": "GET"
+			},
+			{
+				"id": "07b53a82-62f9-4262-a395-e13e9a0c6395",
+				"method": "PUT"
+			},
+			{
+				"id": "8afde927-4ecd-4e6b-adc8-0f776144dbfb",
+				"method": "PUT"
+			},
+			{
+				"id": "89897eec-141b-44f7-a3c8-da979301ecda",
+				"method": "PUT"
+			},
+			{
+				"id": "b64b394c-089f-4edf-8b73-3f9f45534d26",
+				"method": "PUT"
+			},
+			{
+				"id": "53259ade-0f20-4bb4-8637-5ffe36939d5d",
+				"method": "PUT"
+			},
+			{
+				"id": "ec78853a-c1b1-46ed-bdac-0e787110132c",
+				"method": "PUT"
+			},
+			{
+				"id": "4b7eb9e2-f484-4a41-8feb-e8dfec81d3c2",
+				"method": "PUT"
+			},
+			{
+				"id": "0aed38cc-91a7-4319-87c6-d5209c89cb74",
+				"method": "PUT"
+			},
+			{
+				"id": "07418d6a-31dd-4119-9b0c-ebfc3155576a",
+				"method": "DELETE"
+			},
+			{
+				"id": "f2f65948-4ac8-4120-ad03-06e4e874682c",
+				"method": "DELETE"
+			},
+			{
+				"id": "571a6776-ee17-4f2c-a6fb-3bd108ae34bc",
+				"method": "DELETE"
+			},
+			{
+				"id": "b6fc4cb8-9a33-4e32-8193-eedbebba7ed9",
+				"method": "DELETE"
+			},
+			{
+				"id": "fbf199ed-51b4-4f03-bd7e-50dec1255109",
+				"method": "DELETE"
+			},
+			{
+				"id": "9a9e2a5f-40ee-431b-be4d-3d5352ccfe1a",
+				"method": "DELETE"
+			},
+			{
+				"id": "f6790616-28c0-41b5-baa1-f28d13b9135f",
+				"method": "DELETE"
+			},
+			{
+				"id": "84e0e0d9-5406-4307-9ba0-de4ca51bffc3",
+				"method": "DELETE"
+			},
+			{
+				"id": "fbfff3d2-e336-48ee-bad5-6a60429b56e3",
+				"method": "DELETE"
+			},
+			{
+				"id": "eaeca591-7326-4a4a-9cb9-424f16c0c7da",
+				"method": "DELETE"
+			}
+		]
+	}
+}

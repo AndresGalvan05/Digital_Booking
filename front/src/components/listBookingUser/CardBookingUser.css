@@ -1,0 +1,150 @@
+h1{
+    align-items: center;
+    text-align: center;
+    color: var(--gris-oscuro);
+    margin-top: 20px;
+}
+
+
+.container-booking-user{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.container-view-booking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    height: calc(100vh - 100px);
+    background-color: rgb(196 196 196 / 10%);
+}
+
+.booking_single_card_container{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    gap: 1rem;
+    padding: 10px 0px;
+    border-radius: 5px;
+}
+
+/* producto */
+
+.cardBookingUser{
+    background-color: white;
+    border: 1px solid #DFE4EA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    height: 30vh;
+    min-height: 300px;
+
+}
+.cardBookingUser:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+
+.info-container-booking{
+    padding: 0.5rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;  
+}
+
+.single-text-container{
+    padding: 5px 0;
+}
+
+
+.info-booking-title{
+    padding: 10px 0 ;
+}
+
+.product-info-booking{
+    padding: 10px;
+}
+
+.reservaButtonContainer{
+    padding-top: 12px;
+    width: 80%;
+    align-self: center;
+}
+
+.reservaButtonContainer button{
+    align-self: center;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+@media (min-width:1440px) {
+    .cardBookingUser{
+        max-width: 630px;
+    }
+
+}
+
+/**** MEDIA QUERY PARA TABLET 768px ****/
+@media (max-width:1280px) {
+    .cardBookingUser{
+
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-height: 350px;
+    }
+    .booking_single_card_container{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        justify-content: center;
+        gap: 1rem;
+        padding: 10px;
+    }
+
+    .Product{
+        width: 100%
+    }
+}
+
+
+/**** MEDIA QUERY PARA mobile-portrait 479px ****/
+@media (max-width:479px) {
+    .cardBookingUser{
+        flex: 0 0 100%;
+        width: 100%; 
+        flex-direction: column;
+        height: 600px;
+        margin-top: 20px;
+    }
+
+    .booking_single_card_container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+
+    .crimg{
+        width: 100%;
+        height: 50%;
+    }
+
+    .crimg img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .info-container{
+        width: 100%;
+    }
+
+}

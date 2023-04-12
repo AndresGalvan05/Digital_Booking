@@ -1,0 +1,55 @@
+.section-title-politic{
+    border-bottom: 1px solid var(--naranja);
+}
+
+.section-title-politic h3{
+    padding: 10px 0;
+    margin-top: 5vh;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.politic-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 10vh;
+    margin-top: 10px;
+}
+
+.politic-grid p{
+    margin: 10px 0;
+    color: var(--gris-plomo);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.41px;
+    width: 400px;
+}
+
+.politic-grid h4{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+    color: var(--gris-oscuro);
+}
+
+
+/*MEDIAQUERIES*/
+
+@media (min-width : 768px) {
+    .politic-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .politic-grid p{
+        width: 320px;
+    }
+}
+
+@media (min-width : 1280px) {
+    .politic-grid{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+    .politic-grid p{
+        width: 400px;
+    }
+}

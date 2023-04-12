@@ -1,0 +1,52 @@
+@import url("https://cdn.syncfusion.com/ej2/material.css");
+
+
+
+.search_bar{
+    color: var(--gris-claro);
+    background-color: var(--gris-oscuro);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.search_bar h2{
+    color: var(--blanco);
+    padding-top: 2rem;
+    font-size: 1.8rem;
+}
+
+.button_container{
+    padding: 2rem 5rem;
+    gap: 1rem;
+    display: flex;
+    z-index: 0;
+}
+
+.button_wrapper{
+    border-radius: var(--button-border-radius);
+    width: 40%;
+}
+
+/**** MEDIA QUERIES ****/
+
+@media(max-width: 1280px){
+    .button_container{
+        padding: 2rem 0;
+    }
+}
+
+@media (max-width: 764px) {
+    .button_container{
+        flex-direction: column;
+    }
+
+    .button_wrapper{
+        width: 100%;
+    }
+
+    .button_main{
+        padding: 0.7rem 2rem;
+    }
+}

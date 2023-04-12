@@ -1,0 +1,78 @@
+.avatarContainer{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.avatarContainer svg{
+    font-size: 1.8rem;
+    color: var(--gris-oscuro);
+}
+
+.avatarContainer svg:hover{
+    font-size: 1.8rem;
+    color: var(--naranja);
+    cursor: pointer;
+}
+
+.avatar{
+    display: flex;
+    align-items: center;
+    background-color: var(--naranja);
+    color: var(--blanco);
+    font-size: 1.5rem;
+    padding: .5rem;
+    border-radius: 2rem;
+}
+
+.admin-button-wrapper{
+    padding-right: 20px;
+    border-right: 2px solid var(--naranja);
+}
+
+.admin-button{
+    background-color: transparent;
+    color: var(--naranja);
+    border: none;
+    font-size: 1.2rem;
+    transition: var(--animation-type);
+}
+
+.admin-button:hover{
+    cursor: pointer;
+    transform: var(--animation);
+}
+
+.greeting{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.greeting span{
+    color: var(--naranja);
+}
+
+@media(max-width: 479px){
+    .avatarContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 50px;
+        left: 50px;
+    }
+
+    .avatar{
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        color: var(--negro);
+        
+    }
+
+    .greeting span{
+        color: white;
+    }
+}

@@ -1,0 +1,50 @@
+.divs-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-click{
+    width: 50%;
+    text-align: center;
+    background-color: var(--naranja);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+
+}
+.button-click:hover{
+    background-color: var(--blanco);
+    color: var(--naranja);
+}
+
+.button-click-clicked{
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.button-click-clicked:hover{
+    background-color: var(--naranja);
+    color: white;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+
+
+.button-list{
+    width: 50%;
+    text-align: center;
+    border-radius: 15px;
+    background-color: var(--naranja);
+    color: white;
+}
+
+
+
+

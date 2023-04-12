@@ -1,0 +1,307 @@
+[2023-04-03 22:41:07] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:41:07] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:41:08] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:41:08] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:41:14] [ INFO ] [ProductoServiceImpl:74] Se realiza la búsqueda de productos random
+[2023-04-03 22:41:21] [ INFO ] [ProductoServiceImpl:74] Se realiza la búsqueda de productos random
+[2023-04-03 22:42:24] [ INFO ] [UsuarioServiceImpl:152] Se encontró un usuario con email=andres@gmail.com
+[2023-04-03 22:42:25] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:42:25] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:42:26] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:42:26] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:42:28] [ INFO ] [UsuarioServiceImpl:152] Se encontró un usuario con email=andres@gmail.com
+[2023-04-03 22:42:31] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:42:37] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:43:03] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:43:03] [ INFO ] [CaracteristicaServiceImpl:42] Se realizó una búsqueda de todas las características
+[2023-04-03 22:43:03] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:43:04] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:43:04] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:43:04] [ INFO ] [CaracteristicaServiceImpl:42] Se realizó una búsqueda de todas las características
+[2023-04-03 22:45:07] [ INFO ] [ProductoServiceImpl:41] Se guardó un nuevo producto
+[2023-04-03 22:45:10] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:45:10] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:45:11] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:45:11] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:45:18] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:45:26] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:46:19] [ INFO ] [ProductoServiceImpl:49] Se encontró un producto con id=7
+[2023-04-03 22:46:21] [ INFO ] [ProductoServiceImpl:49] Se encontró un producto con id=7
+[2023-04-03 22:46:22] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:46:22] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:46:23] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:46:23] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:46:31] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:46:38] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:47:55] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:47:55] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:47:56] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:47:56] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:47:57] [ INFO ] [ProductoServiceImpl:49] Se encontró un producto con id=1
+[2023-04-03 22:48:03] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:48:11] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:49:12] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:49:12] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:49:13] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:49:13] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:49:20] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:49:26] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:49:26] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:49:26] [ INFO ] [CaracteristicaServiceImpl:42] Se realizó una búsqueda de todas las características
+[2023-04-03 22:49:27] [ INFO ] [CaracteristicaServiceImpl:42] Se realizó una búsqueda de todas las características
+[2023-04-03 22:49:27] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:49:27] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:49:28] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:51:25] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:51:25] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:51:26] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:51:26] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:51:32] [ INFO ] [ReservaServiceImpl:71] Se realizó una búsqueda de todas las puntuaciones del usuario con email andres@gmail.com
+[2023-04-03 22:51:33] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:51:36] [ INFO ] [ReservaServiceImpl:71] Se realizó una búsqueda de todas las puntuaciones del usuario con email andres@gmail.com
+[2023-04-03 22:51:36] [ INFO ] [ProductoServiceImpl:49] Se encontró un producto con id=1
+[2023-04-03 22:51:41] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:51:41] [ INFO ] [ProductoServiceImpl:49] Se encontró un producto con id=1
+[2023-04-03 22:52:14] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:52:14] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:52:15] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 22:52:15] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 22:52:22] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:52:25] [ INFO ] [ProductoServiceImpl:74] Se realiza la búsqueda de productos random
+[2023-04-03 22:52:29] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 22:52:32] [ INFO ] [ProductoServiceImpl:74] Se realiza la búsqueda de productos random
+[2023-04-03 23:04:48] [ INFO ] [ReservaServiceImpl:71] Se realizó una búsqueda de todas las puntuaciones del usuario con email andres@gmail.com
+[2023-04-03 23:04:52] [ INFO ] [ReservaServiceImpl:71] Se realizó una búsqueda de todas las puntuaciones del usuario con email andres@gmail.com
+[2023-04-03 23:04:53] [ INFO ] [ProductoServiceImpl:49] Se encontró un producto con id=1
+[2023-04-03 23:04:58] [ INFO ] [ProductoServiceImpl:49] Se encontró un producto con id=1
+[2023-04-03 23:07:12] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 23:07:12] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 23:07:13] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 23:07:13] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 23:07:18] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 23:07:24] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-03 23:07:39] [ INFO ] [UsuarioServiceImpl:64] Se guardó un nuevo usuario
+[2023-04-03 23:08:50] [ INFO ] [UsuarioServiceImpl:76] Se validó el email del usuario con id=32 y email=8il.andre@gmail.com
+[2023-04-03 23:09:23] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 23:09:23] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 23:09:24] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-03 23:09:24] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-03 23:09:29] [ INFO ] [ProductoServiceImpl:74] Se realiza la búsqueda de productos random
+[2023-04-03 23:09:36] [ INFO ] [ProductoServiceImpl:74] Se realiza la búsqueda de productos random
+[2023-04-03 23:10:50] [ INFO ] [UsuarioServiceImpl:117] Su actualizó la contraseña del usuario con id 32 y email 8il.andre@gmail.com
+[2023-04-04 13:18:40] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:18:40] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:18:41] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:18:41] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:19:11] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:19:28] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:19:28] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:19:29] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:19:29] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:19:30] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:20:00] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:20:16] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:20:26] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:20:26] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:20:28] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:20:28] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:20:36] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:20:37] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:20:38] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:20:38] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:21:04] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:21:04] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:21:05] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:21:05] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:21:05] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:21:24] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:21:28] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:21:28] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:21:42] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:22:01] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:22:17] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:22:17] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:22:18] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:22:18] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:22:38] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:22:38] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:22:39] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:22:39] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:22:46] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:22:46] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:22:48] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:22:48] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:22:51] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:23:09] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:23:20] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:23:30] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:23:30] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:23:31] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:23:31] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:23:36] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:23:46] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:23:46] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:23:48] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:23:48] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:24:07] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:24:27] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:24:36] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:24:44] [ INFO ] [ProductoServiceImpl:81] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:42:03] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:43:30] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:43:30] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:43:32] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 13:43:32] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 13:44:03] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:44:22] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 13:46:02] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:46:13] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:46:23] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:46:32] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:46:41] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:46:50] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:46:58] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:47:08] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:47:17] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:47:26] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:47:35] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:47:44] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:47:58] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:48:02] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:51:18] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:51:26] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:51:35] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:51:43] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:51:51] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:52:00] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:52:09] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:52:18] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:52:26] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:53:21] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:53:30] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:55:03] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:55:11] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:55:27] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 13:55:36] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:11:36] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:11:46] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:11:57] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:12:09] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:27:53] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:28:03] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:28:13] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 14:28:13] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 14:28:15] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 14:28:15] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 14:28:20] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:28:21] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:28:32] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:28:44] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 14:29:11] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 14:29:30] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 14:29:30] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 14:29:32] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 14:29:32] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 14:29:43] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:29:58] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:30:13] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 14:30:30] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 14:32:46] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 14:32:46] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 14:32:48] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 14:32:48] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 14:32:58] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:33:11] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:33:32] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 14:33:41] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 14:34:10] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 14:34:10] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 14:34:12] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 14:34:12] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 14:34:27] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:34:41] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:35:01] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 14:35:13] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 14:37:13] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 14:37:13] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 14:37:15] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 14:37:15] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 14:37:31] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:37:41] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:37:54] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 14:38:12] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 14:54:17] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:54:29] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:54:42] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:54:56] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:56:07] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 14:56:07] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 14:56:09] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 14:56:09] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 14:56:19] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:56:30] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 14:57:04] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 14:57:12] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 14:59:49] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 15:00:00] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 15:49:54] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 15:49:54] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 15:49:55] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 15:49:55] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 15:49:59] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 15:50:03] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 15:50:13] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 15:50:33] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 16:07:10] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 16:07:10] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 16:07:12] [ INFO ] [CiudadServiceImpl:54] Se realizó una búsqueda de todas las ciudades
+[2023-04-04 16:07:12] [ INFO ] [CategoriaServiceImpl:42] Se realizó una búsqueda de todas las categorías
+[2023-04-04 16:07:14] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 16:07:17] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 16:07:18] [ INFO ] [ProductoServiceImpl:74] Se realizó una búsqueda de todos los productos favoritos para el cliente con id=1
+[2023-04-04 16:07:23] [ INFO ] [ProductoServiceImpl:88] Se realizó una búsqueda de todos los productos
+[2023-04-04 16:07:52] [ INFO ] [UsuarioServiceImpl:64] Se guardó un nuevo usuario
+[2023-04-04 16:08:08] [ INFO ] [UsuarioServiceImpl:76] Se validó el email del usuario con id=38 y email=rodrimat99@hotmail.com
+[2023-04-04 16:10:40] [ INFO ] [UsuarioServiceImpl:64] Se guardó un nuevo usuario
+[2023-04-04 16:10:57] [ INFO ] [UsuarioServiceImpl:76] Se validó el email del usuario con id=40 y email=rodrigamer7@gmail.com
+[2023-04-04 17:04:34] [ INFO ] [UsuarioServiceImpl:64] Se guardó un nuevo usuario
+[2023-04-04 17:06:48] [ INFO ] [ReservaServiceImpl:57] Se guardo una nueva reserva
+[2023-04-04 17:18:22] [ INFO ] [UsuarioServiceImpl:64] Se guardó un nuevo usuario
+[2023-04-04 17:27:36] [ INFO ] [UsuarioServiceImpl:64] Se guardó un nuevo usuario
+[2023-04-04 17:29:46] [ INFO ] [UsuarioServiceImpl:64] Se guardó un nuevo usuario
+[2023-04-04 17:36:50] [ INFO ] [ReservaServiceImpl:57] Se guardo una nueva reserva
+[2023-04-04 17:43:54] [ INFO ] [UsuarioServiceImpl:64] Se guardó un nuevo usuario
+[2023-04-04 17:58:02] [ INFO ] [CaracteristicaServiceImpl:35] No se encontró ninguna característica con id=80
+[2023-04-04 17:58:12] [ INFO ] [CaracteristicaServiceImpl:32] Se encontró una característica con id=8
+[2023-04-04 17:59:03] [ INFO ] [CaracteristicaServiceImpl:35] No se encontró ninguna característica con id=80
+[2023-04-04 18:07:14] [ INFO ] [CaracteristicaServiceImpl:32] Se encontró una característica con id=5
+[2023-04-04 18:07:15] [ INFO ] [CaracteristicaServiceImpl:50] Se actualizó la característica con id=5
+[2023-04-04 18:08:07] [ INFO ] [CiudadServiceImpl:32] Se encontró una ciudad con id=2
+[2023-04-04 18:08:07] [ INFO ] [CiudadServiceImpl:62] Se actualizó la ciudad con id=2
+[2023-04-04 18:17:00] [ INFO ] [CaracteristicaServiceImpl:35] No se encontró ninguna característica con id=1000
+[2023-04-07 22:07:53] [ INFO ] [UsuarioServiceImpl:187] Se actualizó el role del usuario con email rodri@gmail.com
+[2023-04-07 22:08:35] [ INFO ] [UsuarioServiceImpl:187] Se actualizó el role del usuario con email rodri@gmail.com
+[2023-04-07 22:13:06] [ INFO ] [UsuarioServiceImpl:187] Se actualizó el role del usuario con email rodri@gmail.com
+[2023-04-07 22:14:14] [ INFO ] [UsuarioServiceImpl:70] Se guardó un nuevo usuario
+[2023-04-07 22:18:59] [ INFO ] [UsuarioServiceImpl:70] Se guardó un nuevo usuario
+[2023-04-07 22:19:29] [ INFO ] [UsuarioServiceImpl:70] Se guardó un nuevo usuario
+[2023-04-07 22:20:08] [ INFO ] [UsuarioServiceImpl:187] Se actualizó el role del usuario con email rodri@gmail.com
+[2023-04-07 22:29:16] [ INFO ] [UsuarioServiceImpl:187] Se actualizó el role del usuario con email rodri@gmail.com
+[2023-04-07 22:29:48] [ INFO ] [UsuarioServiceImpl:187] Se actualizó el role del usuario con email rodri@gmail.com
+[2023-04-07 22:31:13] [ INFO ] [UsuarioServiceImpl:187] Se actualizó el role del usuario con email rodri@gmail.com
+[2023-04-08 00:25:12] [ INFO ] [UsuarioServiceImpl:71] Se guardó un nuevo usuario
+[2023-04-08 00:25:23] [ INFO ] [UsuarioServiceImpl:71] Se guardó un nuevo usuario
+[2023-04-08 00:30:35] [ INFO ] [ProductoServiceImpl:50] Se encontró un producto con id=2
+[2023-04-08 00:31:24] [ INFO ] [ProductoServiceImpl:53] No se encontró ningún producto con id=94
+[2023-04-08 00:31:33] [ INFO ] [ProductoServiceImpl:50] Se encontró un producto con id=2
+[2023-04-08 00:32:29] [ INFO ] [ProductoServiceImpl:61] Se realizó una búsqueda de un producto con titulo=Hotel Hermitage
+[2023-04-09 18:46:20] [ INFO ] [UsuarioServiceImpl:78] Se guardó un nuevo usuario
+[2023-04-09 21:00:18] [ INFO ] [UsuarioServiceImpl:226] Se actualizó el role del usuario con email rodri@gmail.com
+[2023-04-09 21:00:32] [ INFO ] [UsuarioServiceImpl:80] Se guardó un nuevo usuario con id=8 y email=8il.andre@gmail.com
+[2023-04-09 21:03:09] [ INFO ] [ReservaServiceImpl:66] Se guardó una nueva reserva para el usuario 8il.andre@gmail.com y el producto Hotel Hermitage
+[2023-04-09 21:03:09] [ INFO ] [ReservaServiceImpl:72] Se guardo una nueva reserva
+[2023-04-09 21:04:30] [ INFO ] [ReservaServiceImpl:66] Se guardó una nueva reserva para el usuario 8il.andre@gmail.com y el producto Hotel Hermitage
+[2023-04-09 21:04:30] [ INFO ] [ReservaServiceImpl:72] Se guardo una nueva reserva
+[2023-04-09 21:05:19] [ INFO ] [ReservaServiceImpl:66] Se guardó una nueva reserva para el usuario 8il.andre@gmail.com y el producto Hotel Hermitage
+[2023-04-09 21:05:19] [ INFO ] [ReservaServiceImpl:72] Se guardo una nueva reserva
+[2023-04-10 10:43:56] [ INFO ] [ProductoServiceImpl:61] Se realizó una búsqueda de un producto con titulo=Hotel Hermitage

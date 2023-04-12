@@ -1,0 +1,2 @@
+// Código para resetear el autoincremental en la BD
+ALTER TABLE productos AUTO_INCREMENT = 0;

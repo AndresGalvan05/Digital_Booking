@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    --naranja: #d83f15;
+    --naranja-claro: #d46748;
+    --negro: #191b1d;
+    --gris-claro: #dfe4ea;
+    --gris-oscuro: #31363f;
+    --gris-plomo: #4F4F50;
+    --font-bold: 700;
+    --blanco: #ffffff;
+
+    --animation-type: transform .2s;
+    --animation: scale(1.2)
+}

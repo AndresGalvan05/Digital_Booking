@@ -1,0 +1,58 @@
+.createProductContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(80vh);
+    padding: 12px;
+}
+
+.createProductContainer button {
+    padding: 12px 83px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.createProductContainer .card {
+    width: 580px;
+    height: 300px;
+    border: 1px solid #dfe4ea;
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 15px 30px;
+    animation: pulse 1s linear;
+}
+
+.createProductContainer .card svg {
+    margin-bottom: 25px;
+}
+
+.createProductContainer .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    height: 70px;
+    margin-bottom: 19px;
+}
+
+.createProductContainer .message {
+    font-weight: 700;
+    font-size: 19px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: rgb(49, 54, 63);
+}

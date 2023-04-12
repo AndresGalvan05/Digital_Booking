@@ -1,0 +1,57 @@
+
+.main-container-list{
+    background-color: var(--gris-claro);
+    margin-bottom: 50px;
+    padding-bottom: 100px;
+    
+}
+.form-product-admin{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-product-admin form input{
+    margin: 20px;
+    height: 30px;
+    width: 300px;
+}
+
+
+
+
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+table{
+    margin-top: 20px;
+    border-collapse: collapse;
+    border: 1px solid var(--naranja);
+}
+
+table, th, td, tr {
+    color: black;
+    padding: 5px;
+  }
+
+
+td{
+    border-bottom: 1px solid var(--naranja);
+}
+
+tr:hover{
+    background-color: rgb(173, 166, 166);
+}
+
+th{
+    background-color: var(--naranja);
+    color: white;
+}
+
+  .div{
+    display: flex;
+  }

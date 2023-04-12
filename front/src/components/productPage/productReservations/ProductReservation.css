@@ -1,0 +1,95 @@
+.calendar-background{
+    background-color: var(--gris-claro);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin-bottom: 7vh;
+}
+
+.calendar{
+    margin: 20px 0;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+}
+
+.section-booking{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    border-radius: 10px;
+}
+.section-booking p{
+    font-size: 20px;
+    text-align: left;
+}
+
+.section-booking button{
+    margin-top: 10px;
+    width: 100%;
+}
+
+@media (min-width : 769px) {
+    .section-booking{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .section-booking button{
+        margin-top: 0px;
+        margin-left: 5px;
+        padding: 5px 80px;
+        font-size: 15px;
+    }
+
+    .section-booking p{
+        padding: 5px;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 479px){
+    .calendar{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .datepicker-container{
+        width: 100%;
+    }
+    .section-booking{
+        display: flex;
+        padding: 20px 0;
+        align-items: center;
+        flex-direction: row;
+        gap: 5px;
+    }
+}
+
+
+@media (min-width : 1280px) {
+    .calendar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    .section-booking{
+        display: block;
+        background-color: white;
+        padding: 20px;
+    }
+
+    .section-booking button{
+        padding: 10px 80px;
+        margin-top: 20px;
+    }
+    .box{
+        width: 60%;
+    }
+}

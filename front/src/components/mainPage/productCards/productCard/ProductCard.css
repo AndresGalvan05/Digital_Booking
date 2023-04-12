@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*** ESTILOS PRODUCTO ****/
+.Product{
+    background-color: white;
+    border: 1px solid #DFE4EA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    width: 49%;
+    height: 30vh;
+    min-height: 300px;
+}
+
+.Product:hover{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+/**** ESTILOS IMAGEN ****/
+.heart{
+    position: relative;
+    left: 19vw;
+    font-size: 1.5rem;
+    bottom: 30vh;
+}
+
+.heart-active{
+    color: var(--naranja);
+}
+
+.heart-active:hover{
+    color: var(--gris-oscuro);
+}
+
+.heart-inactive:hover{
+    color: var(--naranja);
+}
+
+.crimg{
+    width: 45%;
+    height: 100%;
+}
+
+.crimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/**** ESTILOS INFORMACION ****/
+.info-container{
+    padding: 0.5rem 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 55%;    
+}
+
+/**** INFO PARTE SUPERIOR ****/
+.info-top{
+    display: flex;
+    margin: 0.5rem 0;
+}
+
+/**** INFO TOP LADO IZQUIERDO ****/
+.info-left{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.star_category_container{
+    display: flex;
+}
+
+.category{
+    margin-right: 0.5rem;
+    color: var(--gris-oscuro);
+    opacity: 0.5;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.star_orange{
+    color: var(--naranja);
+}
+
+.star_black{
+    color : var(--gris-oscuro)
+}
+
+.stars_container:hover .star_orange{
+    color: var(--gris-oscuro);
+}
+
+.stars_container:hover .star_orange:hover,
+.stars_container:hover .star_black:hover
+{
+    color: var(--naranja);
+}
+
+.card_title{
+    color: var(--gris-oscuro);
+    margin-bottom: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    padding-top: 5px;
+}
+
+/**** INFO TOP LADO DERECHO ****/
+.info-right{
+    width: 20%;
+}
+
+.info-calification{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.calification{
+    background-color: var(--gris-oscuro);
+    color: #F3F1ED; 
+    width: 34px;
+    height: 27px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    padding-top: 3px;
+    text-align: center;
+}
+
+/**** INFO LOCATION  ****/
+.info-location{
+    display: flex;
+    padding-bottom: 0.4rem;
+    align-items: center;
+}
+
+.location{
+    display: flex;
+    justify-content: flex-start;
+    text-indent: 0.8em;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.location a{
+    color: var(--naranja);
+}
+
+/**** INFO ICONS ****/
+.iconos{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--gris-oscuro);
+}
+/* .products-icons{
+    color: var(--gris-oscuro);
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 2rem;
+} */
+
+.info-icons-admin{
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons-admin-delete{
+    color: red;
+}
+
+.icon{
+    font-size: 1rem;
+    margin-right: 10px;
+    color: var(--naranja);
+}
+
+.vermas{
+    margin: 0.5rem 0;
+    background: var(--naranja);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 5px;
+    align-self: center;
+
+    height: 40px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    border-radius: 5px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.color{
+    color: var(--naranja);
+}
+.description{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--gris-oscuro);
+}
+
+/**** MEDIA QUERY PARA DESKTOP 1280 ****/
+
+@media (max-width:1440px) {
+    .Product{
+        max-width: 630px;
+    }
+
+    .info-calification p{
+        font-size: 11px;
+    }
+    .heart{
+        left: 18vw;
+        bottom: 32vh;
+    }
+}
+
+/**** MEDIA QUERY PARA TABLET 768px ****/
+@media (max-width:1280px) {
+    .Product{
+
+        flex: 0 0 100%;
+        max-width: 100%;
+        min-height: 350px;
+    }
+
+    .info-calification p{
+        font-size: 11px;
+    }
+
+    .heart{
+        position: relative;
+        left: 38vw;
+        font-size: 1.5rem;
+        bottom: 37vh;
+    }
+}
+
+/**** MEDIA QUERY PARA mobile-portrait 479px ****/
+@media (max-width:479px) {
+    .Product{
+        flex: 0 0 100%;
+        width: 100%; 
+        flex-direction: column;
+        height: 600px;
+    }
+
+    .crimg{
+        width: 100%;
+        height: 50%;
+    }
+
+    .crimg img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .info-container{
+        width: 100%;
+    }
+
+    .heart{
+        position: relative;
+        left: 80vw;
+        font-size: 1.5rem;
+        bottom: 33vh;
+    }
+}

@@ -1,0 +1,19 @@
+.ProductList{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem 0;
+    padding-bottom: 10vh;
+}
+
+.recommendations{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(196 196 196 / 10%);
+  margin-top: 5px;
+}
+
+.section-title{
+    font-size: 2rem;
+    padding: 1.5rem 0;
+}
