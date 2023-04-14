@@ -4,4 +4,4 @@ Creada en el marco del Proyecto Integrador de la carrera Certified Tech Develope
 
 Deploy: http://g9c3-frontend.s3-website.us-east-2.amazonaws.com/ <br/>
 Documentación: http://3.145.84.116:8090/swagger-ui/index.html <br/>
-Por más información: [Wiki del proyecto](https://github.com/Elhunter05/Digital_Booking/wiki)
+Por más información: [Wiki del proyecto](https://github.com/AndresGalvan05/Digital_Booking/wiki)
