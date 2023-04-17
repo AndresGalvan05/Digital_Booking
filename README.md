@@ -1,4 +1,4 @@
-# Proyecto Integrador "DigitalBooking"
+# Digital Booking | Aplicación de reserva de hoteles
 Aplicación web que brinda servicios de alquiler de alojamientos.<br/>
 Creada en el marco del Proyecto Integrador de la carrera Certified Tech Developer de Digital House.
 
